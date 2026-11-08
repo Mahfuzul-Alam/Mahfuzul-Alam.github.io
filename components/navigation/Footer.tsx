@@ -7,13 +7,13 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-apple-border/70 bg-white/60 mt-20">
+    <footer className="border-t border-apple-border/70 dark:border-white/10 bg-white/60 dark:bg-black mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           {/* Identity */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2">
-              <span className="w-6 h-6 rounded-full bg-apple-text text-white flex items-center justify-center text-[10px] font-semibold">
+              <span className="w-6 h-6 rounded-full bg-apple-text text-white dark:text-black flex items-center justify-center text-[10px] font-semibold">
                 {personalData.initials}
               </span>
               <span className="text-sm font-semibold text-apple-text">

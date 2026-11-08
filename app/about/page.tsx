@@ -344,7 +344,7 @@ export default function AboutPage() {
             <a
               href={assetPath(personalData.resumeUrl)}
               download="Mahfuzul_Alam_CV.pdf"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium text-white bg-apple-text hover:bg-black transition-all shadow-apple"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium text-white bg-apple-text dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple"
             >
               <FileText className="w-3.5 h-3.5" />
               <span>Download CV (PDF)</span>

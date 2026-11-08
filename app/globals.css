@@ -73,6 +73,49 @@
   background-color: rgba(28, 28, 30, 0.95) !important;
 }
 
+.dark footer,
+.dark .bg-white\/60 {
+  background-color: #000000 !important;
+}
+
+/* Ensure all buttons with bg-apple-text render crisp black text on white background in dark mode */
+.dark .bg-apple-text.text-white,
+.dark .bg-apple-text {
+  background-color: #F5F5F7 !important;
+  color: #000000 !important;
+}
+
+.dark .bg-apple-text.text-white *,
+.dark .bg-apple-text * {
+  color: #000000 !important;
+}
+
+/* Inputs, textareas & selects in dark mode */
+.dark input,
+.dark textarea,
+.dark select {
+  color: #F5F5F7 !important;
+  background-color: #2C2C2E !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #8E8E93 !important;
+}
+
+/* Code blocks in dark mode */
+.dark pre {
+  background-color: #161618 !important;
+  color: #F5F5F7 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark code {
+  color: #F5F5F7 !important;
+}
+
+/* Shadows in dark mode */
 .dark .shadow-apple-sm,
 .dark .shadow-apple {
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
@@ -83,6 +126,7 @@
   box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.7);
 }
 
+/* Borders in dark mode */
 .dark .border-apple-border\/80,
 .dark .border-apple-border\/70,
 .dark .border-apple-border\/60,

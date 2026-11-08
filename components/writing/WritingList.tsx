@@ -50,14 +50,14 @@ export function WritingList({ articles }: WritingListProps) {
               onClick={() => setSelectedCategory(cat)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 ${
                 isSelected
-                  ? "bg-apple-text text-white shadow-apple-sm"
-                  : "bg-apple-subtle text-apple-secondary hover:text-apple-text hover:bg-apple-borderSubtle"
+                  ? "bg-apple-text text-white dark:bg-white dark:text-black shadow-apple-sm"
+                  : "bg-apple-subtle text-apple-secondary hover:text-apple-text hover:bg-apple-borderSubtle dark:bg-white/5 dark:text-apple-secondary dark:hover:text-white"
               }`}
             >
               <span>{cat}</span>
               <span
                 className={`text-[10px] px-1.5 py-0.2 rounded-full ${
-                  isSelected ? "bg-white/20 text-white" : "bg-black/5 text-apple-tertiary"
+                  isSelected ? "bg-white/20 text-white dark:bg-black/20 dark:text-black" : "bg-black/5 dark:bg-white/10 text-apple-tertiary"
                 }`}
               >
                 {count}
@@ -69,7 +69,7 @@ export function WritingList({ articles }: WritingListProps) {
 
       {/* Featured Article Banner (Only on 'All' view) */}
       {selectedCategory === "All" && featuredArticle && (
-        <section className="relative p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-white via-white to-blue-50/40 border border-apple-blue/20 shadow-apple hover:shadow-apple-md transition-all duration-300 space-y-5">
+        <section className="relative p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-white via-white to-blue-50/40 dark:from-[#1C1C1E] dark:via-[#1C1C1E] dark:to-blue-950/30 border border-apple-blue/20 dark:border-blue-500/30 shadow-apple hover:shadow-apple-md transition-all duration-300 space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-apple-blueLight text-apple-blue text-xs font-semibold">
               <Sparkles className="w-3.5 h-3.5" />

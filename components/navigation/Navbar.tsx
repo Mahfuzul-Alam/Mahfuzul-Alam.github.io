@@ -52,7 +52,7 @@ export function Navbar() {
             aria-label={`${personalData.name} — Home`}
             className="group flex items-center font-medium tracking-tight text-apple-text hover:text-apple-blue transition-colors"
           >
-            <span className="w-8 h-8 rounded-full bg-apple-text text-white flex items-center justify-center text-xs font-semibold tracking-wider group-hover:bg-apple-blue transition-colors">
+            <span className="w-8 h-8 rounded-full bg-apple-text text-white dark:text-black flex items-center justify-center text-xs font-semibold tracking-wider group-hover:bg-apple-blue transition-colors">
               {personalData.initials}
             </span>
           </Link>

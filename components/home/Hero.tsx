@@ -36,7 +36,7 @@ export function Hero() {
             <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4">
               <Link
                 href="/projects/"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-white bg-apple-text hover:bg-black transition-all shadow-apple hover:shadow-apple-md"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-white bg-apple-text dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple hover:shadow-apple-md"
               >
                 <span>Explore Projects</span>
                 <ArrowRight className="w-4 h-4" />
