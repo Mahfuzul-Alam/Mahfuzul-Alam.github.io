@@ -29,6 +29,43 @@
   }
 }
 
+/* Touch interaction & mobile spring feedback */
+button,
+a,
+[role="button"] {
+  -webkit-tap-highlight-color: rgba(0, 113, 227, 0.12);
+  touch-action: manipulation;
+}
+
+/* Native tactile spring & Apple Blue micro-feedback on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  [role="button"] {
+    transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.12s ease, background-color 0.12s ease;
+  }
+
+  button:active,
+  a:active,
+  [role="button"]:active {
+    transform: scale(0.965);
+  }
+
+  /* Micro-halo on pill buttons & interactive cards upon press */
+  button:active,
+  a[class*="rounded"]:active {
+    box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.25), 0 2px 8px rgba(0, 113, 227, 0.12);
+  }
+
+  /* Keep inline paragraph links stable without scaling paragraph text */
+  p a:active {
+    transform: none !important;
+    box-shadow: none !important;
+    color: #0071E3;
+    text-decoration: underline;
+  }
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,
