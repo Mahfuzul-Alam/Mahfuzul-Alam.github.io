@@ -27,13 +27,21 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-  const urlPath = decodeURIComponent(req.url.split("?")[0]);
-  let filePath = path.join(ROOT_DIR, urlPath);
+  const parsedUrl = new URL(req.url, `http://${req.headers.host || "localhost"}`);
+  const pathname = decodeURIComponent(parsedUrl.pathname);
+  let filePath = path.join(ROOT_DIR, pathname);
 
   // Normalize path traversal
   if (!filePath.startsWith(ROOT_DIR)) {
     res.writeHead(403);
     res.end("Forbidden");
+    return;
+  }
+
+  // If request is a directory without trailing slash, redirect to trailing slash
+  if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory() && !pathname.endsWith("/")) {
+    res.writeHead(301, { Location: `${pathname}/${parsedUrl.search}` });
+    res.end();
     return;
   }
 
@@ -50,19 +58,26 @@ const server = http.createServer((req, res) => {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || "application/octet-stream";
 
+    // Disable caching in preview mode so rebuilds never serve stale or mismatched assets
     res.writeHead(200, {
       "Content-Type": contentType,
       "Access-Control-Allow-Origin": "*",
-      "Cache-Control": ext === ".html" ? "no-cache" : "public, max-age=31536000",
+      "Cache-Control": "no-cache, no-store, must-revalidate",
+      "Pragma": "no-cache",
+      "Expires": "0",
     });
 
     const stream = fs.createReadStream(filePath);
     stream.pipe(res);
   } else {
+    console.warn(`[404] Not Found: ${pathname}`);
     // 404 Fallback
     const notFoundPath = path.join(ROOT_DIR, "404.html");
     if (fs.existsSync(notFoundPath)) {
-      res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
+      res.writeHead(404, {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+      });
       fs.createReadStream(notFoundPath).pipe(res);
     } else {
       res.writeHead(404);

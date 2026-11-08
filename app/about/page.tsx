@@ -17,7 +17,6 @@ import {
   Linkedin,
   Github,
   BookOpen,
-  ExternalLink,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -301,20 +300,7 @@ export default function AboutPage() {
                 className="p-5 rounded-2xl bg-white border border-apple-border/70 shadow-apple-sm flex flex-col justify-between space-y-3 hover:shadow-apple transition-all"
               >
                 <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <Award className="w-5 h-5 text-apple-blue" />
-                    {cert.verificationUrl && (
-                      <a
-                        href={cert.verificationUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-apple-tertiary hover:text-apple-blue transition-colors p-1"
-                        title="View Official Certificate"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </a>
-                    )}
-                  </div>
+                  <Award className="w-5 h-5 text-apple-blue" />
                   <h4 className="text-xs font-semibold text-apple-text leading-snug">
                     {cert.title}
                   </h4>
