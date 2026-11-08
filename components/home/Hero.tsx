@@ -12,12 +12,6 @@ export function Hero() {
         <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-10 lg:gap-16">
           {/* Text Content */}
           <div className="flex-1 text-center md:text-left space-y-6 max-w-2xl">
-            {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-apple-subtle border border-apple-border text-xs text-apple-secondary font-medium">
-              <span className="w-2 h-2 rounded-full bg-apple-green animate-pulse" />
-              <span>Available for SDET & Quality Engineering Roles</span>
-            </div>
-
             {/* Title & Name */}
             <div className="space-y-2">
               <p className="text-sm font-semibold uppercase tracking-wider text-apple-secondary">

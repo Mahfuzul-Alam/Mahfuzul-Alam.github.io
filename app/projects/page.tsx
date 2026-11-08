@@ -25,7 +25,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="pt-10 sm:pt-14 pb-16 sm:pb-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
         <PageHeader
           eyebrow="Portfolio & Case Studies"
           title="Projects & Engineering Systems"
@@ -58,11 +58,11 @@ export default function ProjectsPage() {
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.slug}
-              className="group flex flex-col justify-between p-7 sm:p-8 rounded-3xl bg-white border border-apple-border/80 shadow-apple-sm hover:shadow-apple-hover hover:border-apple-border transition-all duration-300"
+              className="group flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white border border-apple-border/80 shadow-apple-sm hover:shadow-apple-hover hover:border-apple-border transition-all duration-300"
             >
               <div>
                 {/* Meta */}
