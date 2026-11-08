@@ -24,7 +24,7 @@ export const articles: Article[] = [
     title: "Beyond Test Cases: How I Use AI as an SDET in My Everyday Work",
     subtitle:
       "AI isn't replacing my testing skills. It's helping me become a more thoughtful, efficient, and technically capable software tester.",
-    date: "November 2024",
+    date: "April 2026",
     readingTime: "7 min read",
     category: "Applied AI in QA",
     featured: true,
@@ -118,7 +118,7 @@ export const articles: Article[] = [
     title: "From Requirements to Test Scenarios: How I Use AI to Think Like a Tester",
     subtitle:
       "Turning complex software requirements into meaningful test scenarios using AI-assisted reasoning and practical QA experience.",
-    date: "November 2024",
+    date: "February 2026",
     readingTime: "6 min read",
     category: "Test Design & Strategy",
     summary:
@@ -205,7 +205,7 @@ Present the results in a structured format.`,
     title: "Using ChatGPT to Write Better Jira Test Cases: A Practical Guide for QA Engineers",
     subtitle:
       "Good test cases should be understandable to everyone. Here's how AI helps me improve clarity, consistency, and maintainability in Jira test management.",
-    date: "November 2024",
+    date: "December 2025",
     readingTime: "6 min read",
     category: "Software Quality & Reliability",
     summary:
@@ -300,7 +300,7 @@ Expected Result:
     title: "AI-Assisted Test Automation: How I Use ChatGPT to Work Smarter with Playwright",
     subtitle:
       "From locator strategies to debugging flaky tests, here's how I use AI to support my journey towards more maintainable test automation.",
-    date: "November 2024",
+    date: "March 2026",
     readingTime: "7 min read",
     category: "Test Automation Engineering",
     summary:
@@ -404,7 +404,7 @@ test('verify resilient navigation and project details', async ({ page }) => {
     title: "When Testing Gets Blocked: How I Use AI to Investigate and Communicate QA Challenges",
     subtitle:
       "Testing doesn't always fail because of application bugs. Sometimes the environment prevents testing altogether. Here's how AI helps me handle those situations.",
-    date: "November 2024",
+    date: "January 2026",
     readingTime: "6 min read",
     category: "Real-World QA & Engineering Practices",
     summary:
@@ -492,7 +492,7 @@ test('verify resilient navigation and project details', async ({ page }) => {
     title: "Heuristic Flakiness Detection: Identifying Unstable Tests from JUnit Artifacts",
     subtitle:
       "How lightweight, client-side outcome aggregation can pinpoint non-deterministic tests without heavy CI instrumentation.",
-    date: "October 2024",
+    date: "October 2025",
     readingTime: "5 min read",
     category: "Software Quality & Reliability",
     summary:
@@ -545,7 +545,7 @@ function isPossibleFlaky(outcomes: TestOutcome[]): boolean {
     title: "Augmenting Edge-Case Discovery: Practical Strategies for LLM-Assisted Test Design",
     subtitle:
       "Leveraging generative AI as a systematic exploration partner to uncover boundary conditions without sacrificing engineering rigor.",
-    date: "October 2024",
+    date: "November 2025",
     readingTime: "6 min read",
     category: "Applied AI in QA",
     summary:

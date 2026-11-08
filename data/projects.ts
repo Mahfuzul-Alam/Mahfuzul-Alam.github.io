@@ -35,7 +35,7 @@ export const projects: ProjectCaseStudy[] = [
     subtitle: "In-memory JUnit XML test analytics and empirical flakiness heuristic engine",
     category: "Test Automation",
     featured: true,
-    date: "2024",
+    date: "2026",
     technologies: [
       "TypeScript",
       "Next.js",
@@ -133,7 +133,7 @@ export const projects: ProjectCaseStudy[] = [
     subtitle: "A calm, high-performance personal task manager built with Next.js App Router and strict TypeScript",
     category: "Software Engineering",
     featured: true,
-    date: "2024",
+    date: "2026",
     technologies: [
       "Next.js (App Router)",
       "React 19",
@@ -206,7 +206,7 @@ export const projects: ProjectCaseStudy[] = [
     subtitle: "Interactive questionnaire workflow and knowledge base interface for home care assistance",
     category: "Software Engineering",
     featured: true,
-    date: "2024",
+    date: "2026",
     technologies: ["HTML5", "CSS3", "JavaScript (ES6+)", "n8n (Architectural Hook)"],
     githubUrl: "https://github.com/Mahfuzul-Alam/michigan-home-help",
     liveUrl: "https://www.michiganworkfromhome.com/",
@@ -266,7 +266,7 @@ export const projects: ProjectCaseStudy[] = [
     subtitle: "Modular web test automation framework covering user journeys, forms, and assertion flows",
     category: "Test Automation",
     featured: true,
-    date: "2024",
+    date: "2022",
     technologies: ["Cypress", "JavaScript", "Mocha", "Chai", "Web Automation"],
     githubUrl: "https://github.com/Mahfuzul-Alam/dummywebtest",
     summary:
