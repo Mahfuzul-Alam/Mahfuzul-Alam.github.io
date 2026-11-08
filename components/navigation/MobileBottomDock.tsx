@@ -41,9 +41,9 @@ export function MobileBottomDock() {
   return (
     <nav
       aria-label="Mobile Navigation Dock"
-      className="md:hidden fixed bottom-2.5 inset-x-2.5 sm:inset-x-auto sm:left-1/2 sm:-translate-x-1/2 sm:w-[420px] z-40 animate-fade-up select-none"
+      className="md:hidden fixed bottom-2.5 inset-x-2.5 sm:inset-x-auto sm:left-1/2 sm:-translate-x-1/2 sm:w-[420px] z-50 animate-fade-up select-none"
     >
-      <div className="bg-white/92 backdrop-blur-xl border border-apple-border/80 shadow-apple-lg rounded-2xl p-1 sm:p-1.5 flex items-center justify-between gap-0.5 pb-[max(0.25rem,env(safe-area-inset-bottom,0px))]">
+      <div className="bg-white border border-apple-border/80 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl p-1 sm:p-1.5 flex items-center justify-between gap-0.5 pb-[max(0.25rem,env(safe-area-inset-bottom,0px))]">
         {DOCK_ITEMS.map((item) => {
           const Icon = item.icon;
           const active = isActive(item.href);

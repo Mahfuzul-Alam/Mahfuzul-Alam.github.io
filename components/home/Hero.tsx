@@ -61,8 +61,8 @@ export function Hero() {
                   src={assetPath(personalData.photoUrl)}
                   alt="Mahfuzul Alam — Software Development Engineer in Test (SDET)"
                   fill
-                  sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, 288px"
-                  className="object-cover object-center scale-110"
+                  sizes="(max-width: 640px) 256px, 288px"
+                  className="object-cover object-center"
                   priority
                 />
               </div>

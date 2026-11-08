@@ -46,8 +46,8 @@ export default function AboutPage() {
                   src={assetPath(personalData.photoUrl)}
                   alt={personalData.name}
                   fill
-                  sizes="(max-width: 640px) 160px, 192px"
-                  className="object-cover object-center scale-110"
+                  sizes="(max-width: 640px) 192px, 224px"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
