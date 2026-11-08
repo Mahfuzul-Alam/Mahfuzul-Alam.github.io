@@ -63,11 +63,6 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link href="/admin/" className="hover:text-apple-blue transition-colors text-apple-tertiary">
-                  Content Studio
-                </Link>
-              </li>
             </ul>
           </div>
 

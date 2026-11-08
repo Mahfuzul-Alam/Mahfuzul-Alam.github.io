@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { personalData, PersonalData } from "@/data/personal";
 import { articles, Article } from "@/data/articles";
 import { projects } from "@/data/projects";
@@ -29,8 +30,26 @@ import {
 type AdminTab = "profile" | "articles" | "projects" | "llms";
 
 export default function AdminPage() {
+  const router = useRouter();
+  const [isLocalhost, setIsLocalhost] = useState<boolean | null>(null);
   const [activeTab, setActiveTab] = useState<AdminTab>("articles");
   const [copiedState, setCopiedState] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hostname = window.location.hostname;
+      const isLocal =
+        hostname === "localhost" ||
+        hostname === "127.0.0.1" ||
+        hostname.endsWith(".local") ||
+        hostname.startsWith("192.168.");
+      setIsLocalhost(isLocal);
+      if (!isLocal) {
+        // Automatically redirect public visitors away from /admin/
+        router.replace("/");
+      }
+    }
+  }, [router]);
 
   // Profile Form State
   const [profile, setProfile] = useState<PersonalData>(personalData);
@@ -136,6 +155,10 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
   const isTitleGood = titleCharCount >= 30 && titleCharCount <= 65;
   const isDescGood = descCharCount >= 120 && descCharCount <= 160;
 
+  if (isLocalhost === false) {
+    return null;
+  }
+
   return (
     <div className="py-12 sm:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
@@ -147,13 +170,13 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
               <span className="text-xs font-semibold text-apple-tertiary uppercase tracking-wider">
                 Management Studio
               </span>
-              <Badge variant="blue">No-Code Editorial Mode</Badge>
+              <Badge variant="green">Localhost Only</Badge>
             </div>
             <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-apple-text">
               Portfolio Content Studio
             </h1>
             <p className="text-xs sm:text-sm text-apple-secondary mt-1">
-              Edit personal details, compose SEO-friendly articles, and generate AI search indices without touching code.
+              Author SEO-friendly articles, update metadata, and preview changes locally. This page is restricted from public deployment.
             </p>
           </div>
 
