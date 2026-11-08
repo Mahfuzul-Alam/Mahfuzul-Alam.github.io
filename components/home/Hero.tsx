@@ -56,44 +56,46 @@ export function Hero() {
                 <FileText className="w-4 h-4 text-apple-secondary" />
                 <span>Download CV</span>
               </a>
-
-              {/* Social Links */}
-              <div className="flex items-center gap-2 pl-1 sm:pl-2">
-                <a
-                  href={personalData.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-full text-apple-secondary hover:text-apple-text hover:bg-black/5 transition-colors border border-transparent hover:border-apple-border"
-                  aria-label="GitHub Profile"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href={personalData.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-full text-apple-secondary hover:text-apple-blue hover:bg-apple-blueLight transition-colors border border-transparent hover:border-apple-blue/10"
-                  aria-label="LinkedIn Profile"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-              </div>
             </div>
           </div>
 
-          {/* Portrait Photo */}
-          <div className="flex-shrink-0 w-full md:w-auto flex justify-center">
-            <div className="w-52 h-52 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-3xl overflow-hidden border border-apple-border/80 shadow-apple-md bg-white p-2 transition-transform duration-300 hover:scale-[1.01]">
+          {/* Portrait Photo & Social Anchors */}
+          <div className="flex-shrink-0 w-full md:w-auto flex flex-col items-center">
+            <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden border border-apple-border/80 shadow-apple-md bg-white p-2 transition-transform duration-300 hover:scale-[1.01]">
               <div className="w-full h-full rounded-[20px] overflow-hidden bg-apple-subtle relative">
                 <Image
                   src={assetPath(personalData.photoUrl)}
                   alt="Mahfuzul Alam — Software Development Engineer in Test (SDET)"
                   fill
-                  sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, 256px"
-                  className="object-cover object-center"
+                  sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, 288px"
+                  className="object-cover object-center scale-110"
                   priority
                 />
               </div>
+            </div>
+
+            {/* Social Links Under Photo */}
+            <div className="mt-4 flex items-center justify-center gap-2.5">
+              <a
+                href={personalData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-apple-secondary hover:text-apple-blue bg-white border border-apple-border/80 shadow-apple-sm hover:shadow-apple transition-all"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin className="w-3.5 h-3.5 text-[#0A66C2]" />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href={personalData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-apple-secondary hover:text-apple-text bg-white border border-apple-border/80 shadow-apple-sm hover:shadow-apple transition-all"
+                aria-label="GitHub Profile"
+              >
+                <Github className="w-3.5 h-3.5 text-apple-text" />
+                <span>GitHub</span>
+              </a>
             </div>
           </div>
         </div>
