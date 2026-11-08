@@ -34,7 +34,7 @@ export async function generateMetadata({
   if (!article) return { title: "Article Not Found" };
 
   return {
-    title: `${article.title} — The SDET Journal`,
+    title: `${article.title} — Mahfuzul Alam`,
     description: article.summary,
     openGraph: {
       title: article.title,
@@ -79,7 +79,7 @@ export default async function ArticleDetailPage({ params }: ArticleProps) {
             className="inline-flex items-center gap-1.5 text-xs font-medium text-apple-secondary hover:text-apple-text transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>The SDET Journal / All Articles</span>
+            <span>Back to Writing</span>
           </Link>
           <SingleArticleLocalAction slug={article.slug} />
         </div>
