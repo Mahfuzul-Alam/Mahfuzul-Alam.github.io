@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { personalData } from "@/data/personal";
 import { assetPath } from "@/lib/utils";
 import { FileText } from "lucide-react";
+import { ThemeToggle } from "@/components/shared/ThemeToggle";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -76,24 +77,26 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Desktop Right Action: Download CV */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Desktop Right Action: Theme Toggle & Download CV */}
+          <div className="hidden md:flex items-center gap-2.5">
+            <ThemeToggle />
             <a
               href={assetPath(personalData.resumeUrl)}
               download="Mahfuzul_Alam_CV.pdf"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white border border-apple-border shadow-apple-sm hover:border-apple-secondary/40 hover:bg-apple-subtle transition-all"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white dark:bg-[#1C1C1E] border border-apple-border dark:border-white/10 shadow-apple-sm hover:border-apple-secondary/40 hover:bg-apple-subtle transition-all"
             >
               <FileText className="w-3.5 h-3.5 text-apple-secondary" />
               <span>Resume</span>
             </a>
           </div>
 
-          {/* Mobile Right Action: Quick CV Download */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile Right Action: Theme Toggle & Quick CV */}
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <a
               href={assetPath(personalData.resumeUrl)}
               download="Mahfuzul_Alam_CV.pdf"
-              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white border border-apple-border/80 shadow-apple-xs active:bg-apple-subtle active:scale-95 transition-all"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white dark:bg-[#1C1C1E] border border-apple-border/80 dark:border-white/10 shadow-apple-xs active:bg-apple-subtle active:scale-95 transition-all"
               aria-label="Download CV"
             >
               <FileText className="w-3.5 h-3.5 text-apple-secondary" />

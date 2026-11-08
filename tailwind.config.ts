@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,17 +11,17 @@ const config: Config = {
     extend: {
       colors: {
         apple: {
-          bg: "#FBFBFD",
-          surface: "#FFFFFF",
-          subtle: "#F5F5F7",
-          border: "#E5E5EA",
-          borderSubtle: "#F2F2F7",
-          text: "#1D1D1F",
-          secondary: "#6E6E73",
-          tertiary: "#86868B",
-          blue: "#0071E3",
-          blueHover: "#0077ED",
-          blueLight: "#F0F6FF",
+          bg: "var(--apple-bg)",
+          surface: "var(--apple-surface)",
+          subtle: "var(--apple-subtle)",
+          border: "var(--apple-border)",
+          borderSubtle: "var(--apple-border-subtle)",
+          text: "var(--apple-text)",
+          secondary: "var(--apple-secondary)",
+          tertiary: "var(--apple-tertiary)",
+          blue: "var(--apple-blue)",
+          blueHover: "var(--apple-blue-hover)",
+          blueLight: "var(--apple-blue-light)",
           green: "#34C759",
           amber: "#FF9500",
           cardHover: "rgba(0, 0, 0, 0.02)",

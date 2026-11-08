@@ -4,7 +4,32 @@
 
 @layer base {
   :root {
+    --apple-bg: #FBFBFD;
+    --apple-surface: #FFFFFF;
+    --apple-subtle: #F5F5F7;
+    --apple-border: #E5E5EA;
+    --apple-border-subtle: #F2F2F7;
+    --apple-text: #1D1D1F;
+    --apple-secondary: #6E6E73;
+    --apple-tertiary: #86868B;
+    --apple-blue: #0071E3;
+    --apple-blue-hover: #0077ED;
+    --apple-blue-light: #F0F6FF;
     --font-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  .dark {
+    --apple-bg: #000000;
+    --apple-surface: #1C1C1E;
+    --apple-subtle: #2C2C2E;
+    --apple-border: #38383A;
+    --apple-border-subtle: #2C2C2E;
+    --apple-text: #F5F5F7;
+    --apple-secondary: #A1A1A6;
+    --apple-tertiary: #8E8E93;
+    --apple-blue: #2997FF;
+    --apple-blue-hover: #40A4FF;
+    --apple-blue-light: rgba(41, 151, 255, 0.15);
   }
 
   html {
@@ -12,8 +37,8 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FBFBFD;
-    color: #1D1D1F;
+    background-color: var(--apple-bg);
+    color: var(--apple-text);
   }
 
   body {
@@ -21,12 +46,52 @@
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    background-color: var(--apple-bg);
+    color: var(--apple-text);
   }
 
   ::selection {
-    background-color: #0071E3;
+    background-color: var(--apple-blue);
     color: #FFFFFF;
   }
+}
+
+/* Dark mode surface & card adaptations */
+.dark .bg-white {
+  background-color: #1C1C1E !important;
+}
+
+.dark .bg-apple-bg\/80 {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.dark .bg-white\/85 {
+  background-color: rgba(28, 28, 30, 0.85) !important;
+}
+
+.dark .bg-white\/92 {
+  background-color: rgba(28, 28, 30, 0.95) !important;
+}
+
+.dark .shadow-apple-sm,
+.dark .shadow-apple {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+.dark .shadow-apple-md,
+.dark .shadow-apple-hover {
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.7);
+}
+
+.dark .border-apple-border\/80,
+.dark .border-apple-border\/70,
+.dark .border-apple-border\/60,
+.dark .border-apple-border {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .border-apple-borderSubtle {
+  border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 /* Touch interaction & mobile spring feedback */
@@ -54,14 +119,14 @@ a,
   /* Micro-halo on pill buttons & interactive cards upon press */
   button:active,
   a[class*="rounded"]:active {
-    box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.25), 0 2px 8px rgba(0, 113, 227, 0.12);
+    box-shadow: 0 0 0 2px rgba(41, 151, 255, 0.3), 0 2px 8px rgba(41, 151, 255, 0.15);
   }
 
   /* Keep inline paragraph links stable without scaling paragraph text */
   p a:active {
     transform: none !important;
     box-shadow: none !important;
-    color: #0071E3;
+    color: var(--apple-blue);
     text-decoration: underline;
   }
 }
