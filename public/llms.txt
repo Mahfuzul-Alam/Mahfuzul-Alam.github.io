@@ -30,6 +30,15 @@ Mahfuzul Alam is a Software Development Engineer in Test (SDET) based in Dhaka, 
 - **Cypress E2E Automation Suite:** Modular web test automation suite covering user journeys, forms, and dynamic assertions. GitHub: https://github.com/Mahfuzul-Alam/dummywebtest
 - **AgileALM Test Automation:** Enterprise Java test framework with Selenium WebDriver, Maven, TestNG, and Page Object Model. GitHub: https://github.com/Mahfuzul-Alam/SeleniumDummyWebTest
 
+## The SDET Journal & Technical Articles
+- **Beyond Test Cases: How I Use AI as an SDET in My Everyday Work:** https://mahfuzul-alam.github.io/writing/ai-assisted-software-testing-sdet-workflow/
+- **From Requirements to Test Scenarios: How I Use AI to Think Like a Tester:** https://mahfuzul-alam.github.io/writing/ai-requirement-analysis-test-scenario-design/
+- **Using ChatGPT to Write Better Jira Test Cases: A Practical Guide for QA Engineers:** https://mahfuzul-alam.github.io/writing/chatgpt-jira-test-case-documentation/
+- **AI-Assisted Test Automation: How I Use ChatGPT to Work Smarter with Playwright:** https://mahfuzul-alam.github.io/writing/ai-assisted-playwright-test-automation/
+- **When Testing Gets Blocked: How I Use AI to Investigate and Communicate QA Challenges:** https://mahfuzul-alam.github.io/writing/ai-assisted-qa-blocker-investigation/
+- **Heuristic Flakiness Detection: Identifying Unstable Tests from JUnit Artifacts:** https://mahfuzul-alam.github.io/writing/heuristic-flakiness-detection-junit-artifacts/
+- **Augmenting Edge-Case Discovery: Practical Strategies for LLM-Assisted Test Design:** https://mahfuzul-alam.github.io/writing/augmenting-edge-case-discovery-llm-test-design/
+
 ## Academic Research
 - **Undergraduate Project Thesis:** "A Comparison of Low Code Development Platforms in Terms of Convenience", Department of Computer Science, American International University-Bangladesh (AIUB), May 2022.
   - Authors: Faiaz Ben Reza, Mahfuzul Alam, Tarif Sadman, Yasmin Sultana.
