@@ -1,0 +1,69 @@
+# Mahfuzul Alam — Complete Engineering Context & Knowledge Base (llms-full.txt)
+
+## Professional Bio
+Mahfuzul Alam is a Software Development Engineer in Test (SDET) based in Dhaka, Bangladesh, with 2.5+ years of verified industry experience in automated testing, software quality engineering, and applied artificial intelligence.
+
+Official designation: Software Development Engineer in Test (SDET)
+Email: mahfuzshanto12@gmail.com
+Phone: +8801939594524
+LinkedIn: https://www.linkedin.com/in/1-mahfuzul-alam/
+GitHub: https://github.com/Mahfuzul-Alam
+Location: Dhaka, Bangladesh
+
+## Core Principles
+1. Determinism Over Quantity: Fifty deterministic, fast automated tests that engineers trust provide superior quality feedback compared to hundreds of flaky tests that are ignored.
+2. Shift-Left Quality: Defects are least expensive to prevent during requirement refinement and user story definition.
+3. Intelligent Augmentation: Leveraging Large Language Models (LLMs) not to blindly generate unverified code, but as cognitive partners for counterfactual scenario exploration and boundary condition discovery.
+
+## Work Experience
+Company: Efficient Software Solutions (May 2024 – Present)
+Role: Software Development Engineer in Test (SDET)
+Progression: Trainee Software QA Engineer -> Junior Software QA Engineer -> SDET
+Responsibilities:
+- Engineering end-to-end automated testing suites across multi-tier web platforms using Playwright and Cypress.
+- Utilizing LLMs to derive edge-case test specifications from product requirement documents.
+- Managing defect lifecycles in Jira Software, collaborating with backend and frontend developers to triage and eliminate recurring flaws.
+- Executing functional, exploratory, smoke, sanity, regression, and REST API tests.
+Key Products Tested:
+- Smart Lotto: Multi-server fundraising platform with player, club, and administrative interfaces.
+- Churchfield Home Services: Flagship ERP platform managing home retrofitting and energy services across Ireland.
+
+## Education & Thesis
+- Degree: B.Sc. in Computer Science & Engineering
+- Institution: American International University-Bangladesh (AIUB)
+- Graduation: 2023
+- Specialization: Software Engineering
+- Undergraduate Thesis: "A Comparison of Low Code Development Platforms in Terms of Convenience"
+  Abstract: Evaluated developer convenience, setup friction, custom code extensibility, and interface ergonomics across leading low-code development platforms (LCDPs), determining that while low-code accelerates standard administrative CRUD interfaces, custom business rules and vendor lock-in present long-term maintenance tradeoffs.
+
+## Technical Projects & Architecture
+1. RunLens — Test Run Reliability Dashboard
+   - Repository: https://github.com/Mahfuzul-Alam/test-run-reliability-dashboard
+   - Live Application: https://mahfuzul-alam.github.io/test-run-reliability-dashboard/
+   - Technologies: TypeScript, Next.js, Python, FastAPI, defusedxml, Tailwind CSS, GitHub Actions.
+   - Heuristic: Identifies flaky tests by evaluating test cases across recorded runs (minimum 5 non-skipped executions with at least 1 pass and at least 1 failure or error).
+   - Security: Zero server persistence; utilizes defusedxml against XML entity attacks (Billion Laughs / XXE); persists run history solely inside browser localStorage.
+
+2. Zenith Tasks
+   - Repository: https://github.com/Mahfuzul-Alam/todo-app
+   - Live Application: https://mahfuzul-alam.github.io/todo-app/
+   - Technologies: Next.js App Router, React 19, TypeScript, Tailwind CSS, LocalStorage API.
+   - Features: WCAG-compliant keyboard accessibility, non-color-reliant visual indicators, resilient quota-exhaustion handling.
+
+3. Michigan Home Help
+   - Repository: https://github.com/Mahfuzul-Alam/michigan-home-help
+   - Live Application: https://www.michiganworkfromhome.com/
+   - Technologies: HTML5, CSS3, JavaScript, n8n webhook architecture.
+   - Purpose: Multi-step questionnaire and knowledge base for caregiver and Medicaid home help program assistance.
+
+4. Cypress E2E Test Suite
+   - Repository: https://github.com/Mahfuzul-Alam/dummywebtest
+   - Technologies: Cypress, JavaScript, Mocha, Chai.
+
+5. AgileALM Selenium WebDriver Framework
+   - Repository: https://github.com/Mahfuzul-Alam/SeleniumDummyWebTest
+   - Technologies: Java, Selenium WebDriver, TestNG, Maven, Page Object Model (POM).
+
+## Technical Writing
+- "Heuristic Flakiness Detection: Identifying Unstable Tests from JUnit Artifacts"
+- "Augmenting Edge-Case Discovery: Practical Strategies for LLM-Assisted Test Design"

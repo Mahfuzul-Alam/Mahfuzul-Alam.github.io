@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/navigation/Footer";
+import { CookieBanner } from "@/components/shared/CookieBanner";
+import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
+import { Analytics } from "@/components/shared/Analytics";
 import { personalData } from "@/data/personal";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mahfuzul-alam.github.io"),
   title: {
     default: `${personalData.name} — ${personalData.title}`,
     template: `%s | ${personalData.name}`,
@@ -32,15 +36,31 @@ export const metadata: Metadata = {
     title: `${personalData.name} — ${personalData.title}`,
     description: personalData.headline,
     siteName: `${personalData.name} Portfolio`,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: `${personalData.name} — ${personalData.title}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${personalData.name} — ${personalData.title}`,
     description: personalData.headline,
+    images: ["/og-image.png"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -50,10 +70,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased bg-apple-bg text-apple-text min-h-screen flex flex-col selection:bg-apple-blue selection:text-white">
+      <body className="font-sans antialiased bg-apple-bg text-apple-text min-h-screen flex flex-col selection:bg-apple-blue selection:text-white pb-14 sm:pb-0">
+        <Analytics />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <MobileStickyBar />
+        <CookieBanner />
       </body>
     </html>
   );

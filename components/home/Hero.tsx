@@ -83,22 +83,16 @@ export function Hero() {
 
           {/* Genuine Portrait Photo */}
           <div className="flex-shrink-0">
-            <div className="relative group">
-              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-3xl overflow-hidden border border-apple-border/80 shadow-apple-md bg-white p-1.5 transition-transform duration-300 hover:scale-[1.01]">
-                <div className="w-full h-full rounded-[22px] overflow-hidden bg-apple-subtle relative">
-                  <Image
-                    src={assetPath(personalData.photoUrl)}
-                    alt={`Portrait of ${personalData.name}`}
-                    fill
-                    sizes="(max-width: 768px) 224px, 256px"
-                    className="object-cover object-top"
-                    priority
-                  />
-                </div>
-              </div>
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/95 backdrop-blur border border-apple-border px-3 py-1 rounded-full text-[11px] font-medium text-apple-secondary shadow-apple-sm flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 text-apple-blue" />
-                <span>Verified Engineering Profile</span>
+            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-3xl overflow-hidden border border-apple-border/80 shadow-apple-md bg-white p-1.5 transition-transform duration-300 hover:scale-[1.01]">
+              <div className="w-full h-full rounded-[22px] overflow-hidden bg-apple-subtle relative">
+                <Image
+                  src={assetPath(personalData.photoUrl)}
+                  alt={`Mahfuzul Alam — Software Development Engineer in Test (SDET)`}
+                  fill
+                  sizes="(max-width: 768px) 224px, 256px"
+                  className="object-cover object-top"
+                  priority
+                />
               </div>
             </div>
           </div>

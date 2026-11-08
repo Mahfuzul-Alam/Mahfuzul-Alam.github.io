@@ -209,6 +209,7 @@ export const projects: ProjectCaseStudy[] = [
     date: "2024",
     technologies: ["HTML5", "CSS3", "JavaScript (ES6+)", "n8n (Architectural Hook)"],
     githubUrl: "https://github.com/Mahfuzul-Alam/michigan-home-help",
+    liveUrl: "https://www.michiganworkfromhome.com/",
     summary:
       "A clean, multi-step eligibility questionnaire and knowledge base frontend created to help families and caregivers navigate the Michigan Home Help Medicaid-funded program.",
     overview:

@@ -63,6 +63,11 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/admin/" className="hover:text-apple-blue transition-colors text-apple-tertiary">
+                  Content Studio
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -114,9 +119,14 @@ export function Footer() {
           <div>
             © {currentYear} {personalData.name}. All rights reserved.
           </div>
-          <div className="flex items-center gap-6">
-            <span>Designed with Apple-inspired minimalism</span>
-            <span>Static Export for GitHub Pages</span>
+          <div className="flex items-center gap-4 text-apple-secondary">
+            <a href={`tel:${personalData.phone}`} className="hover:text-apple-blue transition-colors">
+              {personalData.phone}
+            </a>
+            <span>•</span>
+            <Link href="/contact/" className="hover:text-apple-blue transition-colors">
+              Contact
+            </Link>
           </div>
         </div>
       </div>

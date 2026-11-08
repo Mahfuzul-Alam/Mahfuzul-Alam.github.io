@@ -6,6 +6,7 @@ export interface PersonalData {
   shortBio: string;
   aboutBio: string;
   email: string;
+  phone: string;
   location: string;
   github: string;
   linkedin: string;
@@ -28,6 +29,7 @@ export const personalData: PersonalData = {
   aboutBio:
     "I'm a Software Development Engineer in Test focused on building reliable software through engineering-driven testing, test automation, and practical applications of emerging technologies. My work and interests span automation engineering, software quality, application testing, and AI-assisted software engineering.",
   email: "mahfuzshanto12@gmail.com",
+  phone: "+8801939594524",
   location: "Dhaka, Bangladesh",
   github: "https://github.com/Mahfuzul-Alam",
   linkedin: "https://www.linkedin.com/in/1-mahfuzul-alam/",

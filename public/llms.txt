@@ -1,0 +1,40 @@
+# Mahfuzul Alam — Software Development Engineer in Test (SDET)
+
+> Building reliable software through intelligent testing and automation.
+
+Mahfuzul Alam is a Software Development Engineer in Test (SDET) based in Dhaka, Bangladesh. He has 2.5+ years of verified industry experience in test automation, software quality engineering, and practical applications of artificial intelligence in software testing.
+
+## Identity & Professional Overview
+- **Name:** Mahfuzul Alam
+- **Title:** Software Development Engineer in Test (SDET)
+- **Email:** mahfuzshanto12@gmail.com
+- **Phone:** +8801939594524
+- **Location:** Dhaka, Bangladesh
+- **LinkedIn:** https://www.linkedin.com/in/1-mahfuzul-alam/
+- **GitHub:** https://github.com/Mahfuzul-Alam
+- **Current Company:** Efficient Software Solutions (May 2024 – Present)
+- **Degree:** B.Sc. in Computer Science & Engineering, American International University-Bangladesh (AIUB), 2018–2023, Specialization in Software Engineering.
+
+## Primary Technical Competencies
+- **Test Automation:** Playwright, Cypress, Selenium WebDriver, TestNG, JUnit, Maven, JMeter.
+- **Testing Methodologies:** End-to-End (E2E) Testing, Regression Testing, Smoke & Sanity Testing, Exploratory Testing, Page Object Model (POM).
+- **Programming & Scripting:** JavaScript (ES6+), TypeScript, Python, Java, SQL, HTML5, CSS3.
+- **API & Data Verification:** Postman, RESTful APIs, JSON Validation, Relational Databases (SQL).
+- **CI/CD & Tools:** Git, GitHub Actions, Jira Software.
+- **AI-Augmented QA:** LLM-assisted test scenario generation, edge-case derivation, requirement analysis, n8n workflow automation, heuristic test flakiness analysis.
+
+## Key Projects
+- **RunLens (Test Run Reliability Dashboard):** Lightweight, in-memory JUnit XML test analytics and flakiness heuristic engine parsing test artifacts across CI/CD builds with client-side localStorage privacy. GitHub: https://github.com/Mahfuzul-Alam/test-run-reliability-dashboard | Live: https://mahfuzul-alam.github.io/test-run-reliability-dashboard/
+- **Zenith Tasks:** High-performance, accessible personal task management system built with Next.js App Router, strict TypeScript, and WCAG-compliant keyboard accessibility. GitHub: https://github.com/Mahfuzul-Alam/todo-app | Live: https://mahfuzul-alam.github.io/todo-app/
+- **Michigan Home Help:** Multi-step caregiver and applicant eligibility questionnaire and knowledge base frontend for Medicaid home care assistance. Live: https://www.michiganworkfromhome.com/ | GitHub: https://github.com/Mahfuzul-Alam/michigan-home-help
+- **Cypress E2E Automation Suite:** Modular web test automation suite covering user journeys, forms, and dynamic assertions. GitHub: https://github.com/Mahfuzul-Alam/dummywebtest
+- **AgileALM Test Automation:** Enterprise Java test framework with Selenium WebDriver, Maven, TestNG, and Page Object Model. GitHub: https://github.com/Mahfuzul-Alam/SeleniumDummyWebTest
+
+## Academic Research
+- **Undergraduate Thesis:** "A Comparison of Low Code Development Platforms in Terms of Convenience", American International University-Bangladesh (AIUB), 2023. Examined developer ergonomics, setup friction, custom logic extensibility, and maintenance tradeoffs across leading low-code platforms.
+- **Research Interests:** AI in Software Engineering, LLM-based test synthesis, CI/CD test flakiness heuristics, software reliability engineering.
+
+## Certifications
+- Cypress - Modern Automation Testing from Scratch + Frameworks (Udemy)
+- Building Test Automation Framework using Selenium and TestNG (Coursera)
+- Performance Testing with JMeter (Coursera)
