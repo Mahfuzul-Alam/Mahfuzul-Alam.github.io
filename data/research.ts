@@ -1,24 +1,51 @@
-export interface ResearchData {
-  thesis: {
-    title: string;
-    degree: string;
-    institution: string;
-    year: string;
-    status: string;
-    abstract: string;
-    background: string;
-    problem: string;
-    objectives: string[];
-    methodology: {
-      description: string;
-      criteria: {
-        criterion: string;
-        description: string;
-      }[];
-    };
-    keyObservations: string[];
-    limitations: string[];
+export interface ResearchThesis {
+  title: string;
+  degree: string;
+  department: string;
+  institution: string;
+  date: string;
+  status: string;
+  authors: {
+    name: string;
+    studentId: string;
+  }[];
+  supervisor: {
+    name: string;
+    designation: string;
+    department: string;
   };
+  abstract: string;
+  background: string;
+  researchQuestions: string[];
+  studiedPlatforms: {
+    name: string;
+    vendor: string;
+    architectureType: string;
+    keyTraits: string;
+  }[];
+  benchmarkUseCase: {
+    name: string;
+    description: string;
+    entities: string[];
+    operations: string[];
+    duration: string;
+  };
+  comparisonMatrix: {
+    category: string;
+    features: {
+      feature: string;
+      outSystems: boolean;
+      zohoCreator: boolean;
+      powerApps: boolean;
+      salesforce: boolean;
+    }[];
+  }[];
+  keyFindings: string[];
+  limitations: string[];
+}
+
+export interface ResearchData {
+  thesis: ResearchThesis;
   researchInterests: {
     title: string;
     description: string;
@@ -35,87 +62,170 @@ export interface ResearchData {
 export const researchData: ResearchData = {
   thesis: {
     title: "A Comparison of Low Code Development Platforms in Terms of Convenience",
-    degree: "B.Sc. in Computer Science & Engineering",
+    degree: "Bachelor of Science in Computer Science",
+    department: "Department of Computer Science, Faculty of Science & IT",
     institution: "American International University-Bangladesh (AIUB)",
-    year: "2023",
-    status: "Undergraduate Thesis (Completed)",
-    abstract:
-      "As demand for rapid software delivery accelerates, Low-Code Development Platforms (LCDPs) have emerged as an alternative to traditional hand-coded development. This study investigated and compared leading low-code platforms to evaluate user convenience, architectural flexibility, development speed, and learning curves for software engineers and non-technical builders.",
-    background:
-      "Enterprise digital transformation requires increasingly swift application turnaround times. Low-Code Development Platforms abstract away boilerplate code and infrastructure setup through visual modeling, drag-and-drop interfaces, and pre-built components. However, questions remain regarding how these platforms impact engineering autonomy, developer experience, and non-functional requirements such as maintainability and custom logic integration.",
-    problem:
-      "Selecting an appropriate development platform requires balancing speed of initial delivery with long-term engineering convenience. Without an empirical evaluation framework, teams struggle to determine whether low-code abstractions provide genuine productivity gains or impose restrictive architectural constraints.",
-    objectives: [
-      "Analyze the operational workflow and interface ergonomics of representative low-code development platforms.",
-      "Establish an evaluation framework centering on developer convenience, setup friction, and extensibility.",
-      "Compare how platforms handle common software engineering concerns such as database modeling, custom business logic, and API connectivity.",
-      "Identify trade-offs between rapid visual assembly and engineering flexibility.",
+    date: "May 2022",
+    status: "Academic Project Thesis (Completed & Defended)",
+    authors: [
+      { name: "Faiaz Ben Reza", studentId: "18-36655-1" },
+      { name: "Mahfuzul Alam", studentId: "18-36746-1" },
+      { name: "Tarif Sadman", studentId: "18-36466-1" },
+      { name: "Yasmin Sultana", studentId: "18-36848-1" },
     ],
-    methodology: {
-      description:
-        "The study established a comparative matrix evaluating platform features across multiple development lifecycle dimensions, focusing on qualitative ergonomics and setup efficiency.",
-      criteria: [
-        {
-          criterion: "Development Speed & Visual Ergonomics",
-          description:
-            "Efficiency of UI generation, component drag-and-drop mechanics, and pre-built module availability.",
-        },
-        {
-          criterion: "Extensibility & Custom Logic",
-          description:
-            "Ease of integrating custom scripts, bespoke code, and third-party RESTful APIs.",
-        },
-        {
-          criterion: "Learning Curve & Onboarding",
-          description:
-            "Time required for developers to navigate tooling, understand platform abstractions, and deploy functional applications.",
-        },
-        {
-          criterion: "Maintenance & Debugging",
-          description:
-            "Visibility into runtime logs, error diagnostics, and iteration speed when revising application logic.",
-        },
-      ],
+    supervisor: {
+      name: "Mir Md. Kawsur",
+      designation: "Lecturer",
+      department: "Department of Computer Science, AIUB",
     },
-    keyObservations: [
-      "Low-code platforms substantially accelerate initial prototype delivery and administrative CRUD application development.",
-      "Convenience is strongly correlated with project complexity: platforms excel in standard data-entry workflows but present friction when implementing non-standard business rules.",
-      "Vendor lock-in and limited direct control over underlying generated code represent significant considerations for long-term maintainability.",
+    abstract:
+      "Low-code development platforms are simple visual environments that are increasingly being marketed and promoted by large IT corporations to enable citizen developers to construct software systems despite having no programming skills. The stated benefit of the latest trend in Low-Code Application Development is convenient and easy application development without extensive development abilities. Understanding and evaluating the LCDP to be used for the specific problem at hand are tough tasks, owing to the fact that decision-makers must choose from hundreds of diverse platforms, which are impossible to evaluate without specialized assistance. As a result, a complete taxonomy is required to expand on the existing low-code platforms and to assist users in determining which platforms are most fit for their needs. We evaluate these claims for four Low-Code platforms in a time-constrained experiment by creating a practical use case. While this was possible in a relatively short period of time for the majority of our use cases, the platforms varied greatly and technical expertise is still necessary for non-trivial applications. This research presents a technical survey of various LCDPs using a proposed conceptual comparative approach. To extract the functions and services that each analyzed platform may provide, a comparable set of characteristics was identified by researching four sample LCDPs. The ultimate goal is to make it easier to comprehend and compare the low-code platforms that can best meet the needs of a given user.",
+    background:
+      "Low-code development platforms (LCDPs) combine all or most of the tools and components necessary for software delivery into a single environment (unifying GUI modeling, database creation, business logic, and deployment). However, decision-makers face difficulty evaluating convenience claims across platforms without empirical comparison. This research conducted a 6-month hands-on comparative study across four representative market leaders.",
+    researchQuestions: [
+      "To what extent do Low-Code Development platforms make application development more convenient and user-friendly for people with little or no programming experience?",
+      "What features do these platforms all have in common?",
+      "What are the results of low-code platforms developed applications?",
+    ],
+    studiedPlatforms: [
+      {
+        name: "OutSystems",
+        vendor: "OutSystems Inc.",
+        architectureType: "Full Code Generation (C#/.NET, JS, HTML/CSS)",
+        keyTraits:
+          "Visual model-driven full-stack IDE with one-click deployment, graphical workflow editor, AI-enabled logic, and local or cloud hosting without proprietary lock-in.",
+      },
+      {
+        name: "Zoho Creator",
+        vendor: "Zoho Corporation",
+        architectureType: "Proprietary Cloud Runtime (Deluge Scripting)",
+        keyTraits:
+          "Form-centric rapid app builder with native data centers, built-in and configurable workflows, and seamless integration into the Zoho product suite.",
+      },
+      {
+        name: "Microsoft PowerApps",
+        vendor: "Microsoft Corporation",
+        architectureType: "Office 365 & Dataverse Runtime (Point-and-Click)",
+        keyTraits:
+          "Tightly integrated with Microsoft Office 365, SharePoint, and Teams, utilizing Excel-like declarative formulas and connectors across Microsoft services.",
+      },
+      {
+        name: "Salesforce Platform",
+        vendor: "Salesforce.com, inc.",
+        architectureType: "Metadata-Driven Cloud Platform (Lightning / Heroku)",
+        keyTraits:
+          "Enterprise metadata-driven architecture with visual drag-and-drop builders, AI-enabled business logic, graphical workflow editors, and CRM extensibility.",
+      },
+    ],
+    benchmarkUseCase: {
+      name: "Contact Management Application",
+      description:
+        "A multi-screen benchmark system built from scratch on each platform following platform defaults without custom hand-written code, implementing authentication, data entry forms, searchable listings, and detail management.",
+      entities: [
+        "Login (login_id, username, password)",
+        "User (id, name, mobile_number, user_email, user_address)",
+        "Contacts (id, name, mobile, email, address, type)",
+      ],
+      operations: [
+        "User Authentication (Login / Logout)",
+        "View Contact Directory & Search",
+        "Add New Contact with Validation",
+        "Edit Existing Contact Records",
+        "Delete Contact Records with Confirmation",
+      ],
+      duration: "6 Months of iterative development and comparative analysis",
+    },
+    comparisonMatrix: [
+      {
+        category: "UI & Interaction Paradigm",
+        features: [
+          { feature: "Drag-and-drop designer", outSystems: true, zohoCreator: true, powerApps: false, salesforce: true },
+          { feature: "Point-and-click approach", outSystems: false, zohoCreator: false, powerApps: true, salesforce: false },
+          { feature: "Pre-built forms and reports", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Pre-built dashboards", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Dedicated forms designer", outSystems: false, zohoCreator: true, powerApps: true, salesforce: false },
+        ],
+      },
+      {
+        category: "Workflows & Business Logic",
+        features: [
+          { feature: "Progress tracking", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Built-in workflows", outSystems: false, zohoCreator: true, powerApps: false, salesforce: true },
+          { feature: "Configurable workflows", outSystems: false, zohoCreator: true, powerApps: false, salesforce: true },
+          { feature: "Business rules engine", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Graphical workflow editor", outSystems: true, zohoCreator: false, powerApps: false, salesforce: true },
+          { feature: "AI-enabled business logic", outSystems: true, zohoCreator: false, powerApps: false, salesforce: true },
+        ],
+      },
+      {
+        category: "Integration & Interoperability",
+        features: [
+          { feature: "Interoperability with external services", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Connection with external data sources", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+        ],
+      },
+      {
+        category: "Security & Collaboration",
+        features: [
+          { feature: "Application security", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Platform security", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Offline collaboration support", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Online real-time collaboration", outSystems: true, zohoCreator: false, powerApps: false, salesforce: true },
+        ],
+      },
+      {
+        category: "Architecture & Deployment",
+        features: [
+          { feature: "Real code generation (e.g. C#/.NET)", outSystems: true, zohoCreator: false, powerApps: false, salesforce: false },
+          { feature: "Models interpreted at run-time", outSystems: false, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Deployment to cloud infrastructure", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+          { feature: "Deployment to on-premise/local infrastructures", outSystems: true, zohoCreator: false, powerApps: false, salesforce: true },
+          { feature: "Scalability (users, data traffic, storage)", outSystems: true, zohoCreator: true, powerApps: true, salesforce: true },
+        ],
+      },
+    ],
+    keyFindings: [
+      "Rapid Prototype Feasibility: All four platforms successfully allowed constructing the benchmark Contact Management System rapidly using built-in drag-and-drop mechanisms without requiring external database setup or initial custom code.",
+      "Technical Expertise Still Required: While citizen developers can quickly build straightforward data-entry CRUD tools, technical engineering expertise remains essential for non-trivial logic, third-party API integration, and edge-case handling.",
+      "Toolchain Consolidation: Unlike traditional software development that requires juggling disjointed IDEs, ORM frameworks, database consoles, and build tools, low-code platforms unify these components into a single visual environment, reducing toolchain transition overhead.",
+      "Security Analysis Gap: Development tools provide static security code analysis during build time, but lack dynamic application security testing (DAST) analyzing vulnerabilities during runtime.",
+      "Customization & Hardware Limits: Hardware and native language capabilities are constrained compared to traditional programming, varying widely between code-generating platforms (OutSystems) and runtime-interpreted models (Zoho, PowerApps).",
     ],
     limitations: [
-      "Study was conducted within academic evaluation parameters; performance under high-concurrency enterprise load was outside the scope.",
-      "Platform feature sets in the low-code domain evolve rapidly; observations represent platform state at the time of study.",
+      "Full developer experience in most low-code environments requires paid enterprise subscriptions; evaluations were constrained by trial tier capabilities.",
+      "All student developers had academic programming backgrounds, which could influence perceptions of low-code ease of use compared to absolute non-technical citizen developers.",
+      "High-concurrency enterprise load testing and dynamic runtime vulnerability fuzzing were beyond the experimental scope.",
     ],
   },
   researchInterests: [
     {
-      title: "AI in Software Engineering & Test Generation",
+      title: "AI in Software Engineering & Automated Test Synthesis",
       description:
-        "Investigating how Large Language Models (LLMs) can reliably synthesize test specifications, identify boundary conditions, and assist in regression test maintenance without hallucinating false verifications.",
+        "Investigating how Large Language Models (LLMs) can systematically derive test specifications, discover edge-case boundary conditions, and assist regression test maintenance without hallucinating false positives.",
       topics: [
         "LLM-assisted test case derivation from user stories",
         "Automated edge-case and mutation discovery",
-        "Synthesizing reliable end-to-end assertions",
+        "Deterministic assertion synthesis for Playwright & Cypress",
       ],
     },
     {
-      title: "Software Reliability & Test Flakiness",
+      title: "Software Reliability & CI/CD Test Flakiness",
       description:
         "Empirical study of non-deterministic automated tests, execution order dependencies, and statistical heuristic models for identifying test drift in continuous integration pipelines.",
       topics: [
-        "Heuristic detection of intermittent test failures",
+        "Heuristic detection of intermittent test failures from JUnit XML",
         "CI/CD build pipeline stability metrics",
-        "Root-cause classification of asynchronous UI timing bugs",
+        "Root-cause triage of asynchronous UI timing anomalies",
       ],
     },
     {
       title: "Quality Engineering & Low-Code Paradigms",
       description:
-        "Examining how low-code/no-code platforms interact with automated testing workflows and verifying quality assurance for visual and declarative systems.",
+        "Examining how low-code/no-code platforms interact with automated testing workflows, verification of visual declarative systems, and security validation in rapid application delivery.",
       topics: [
-        "Testability of visual and declarative application architectures",
-        "Workflow automation pipelines in software delivery",
-        "Balancing development velocity with strict QA standards",
+        "Testability and automated regression of low-code architectures",
+        "Static vs Dynamic security analysis in rapid app development",
+        "Balancing speed of visual assembly with long-term software quality",
       ],
     },
   ],

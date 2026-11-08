@@ -31,7 +31,11 @@ Mahfuzul Alam is a Software Development Engineer in Test (SDET) based in Dhaka, 
 - **AgileALM Test Automation:** Enterprise Java test framework with Selenium WebDriver, Maven, TestNG, and Page Object Model. GitHub: https://github.com/Mahfuzul-Alam/SeleniumDummyWebTest
 
 ## Academic Research
-- **Undergraduate Thesis:** "A Comparison of Low Code Development Platforms in Terms of Convenience", American International University-Bangladesh (AIUB), 2023. Examined developer ergonomics, setup friction, custom logic extensibility, and maintenance tradeoffs across leading low-code platforms.
+- **Undergraduate Project Thesis:** "A Comparison of Low Code Development Platforms in Terms of Convenience", Department of Computer Science, American International University-Bangladesh (AIUB), May 2022.
+  - Authors: Faiaz Ben Reza, Mahfuzul Alam, Tarif Sadman, Yasmin Sultana.
+  - Supervisor: Mir Md. Kawsur, Lecturer, Department of Computer Science, AIUB.
+  - Platforms Investigated: OutSystems, Zoho Creator, Microsoft PowerApps, Salesforce.
+  - Practical Benchmark: Built a Contact Management System across all 4 platforms without custom hand-written code to evaluate development convenience, toolchain consolidation, dynamic vs static security analysis, and runtime models.
 - **Research Interests:** AI in Software Engineering, LLM-based test synthesis, CI/CD test flakiness heuristics, software reliability engineering.
 
 ## Certifications

@@ -31,10 +31,16 @@ Key Products Tested:
 ## Education & Thesis
 - Degree: B.Sc. in Computer Science & Engineering
 - Institution: American International University-Bangladesh (AIUB)
-- Graduation: 2023
+- Department: Department of Computer Science, Faculty of Science & IT
+- Graduation: 2023 (Thesis defended: May 2022)
 - Specialization: Software Engineering
-- Undergraduate Thesis: "A Comparison of Low Code Development Platforms in Terms of Convenience"
-  Abstract: Evaluated developer convenience, setup friction, custom code extensibility, and interface ergonomics across leading low-code development platforms (LCDPs), determining that while low-code accelerates standard administrative CRUD interfaces, custom business rules and vendor lock-in present long-term maintenance tradeoffs.
+- Undergraduate Project Thesis: "A Comparison of Low Code Development Platforms in Terms of Convenience"
+  - Authors: Faiaz Ben Reza (18-36655-1), Mahfuzul Alam (18-36746-1), Tarif Sadman (18-36466-1), Yasmin Sultana (18-36848-1)
+  - Supervisor: Mir Md. Kawsur (Lecturer, Department of Computer Science, AIUB)
+  - Abstract: Low-code development platforms are simple visual environments that are increasingly being marketed and promoted by large IT corporations to enable citizen developers to construct software systems despite having no programming skills. The stated benefit of the latest trend in Low-Code Application Development is convenient and easy application development without extensive development abilities. Understanding and evaluating the LCDP to be used for the specific problem at hand are tough tasks, owing to the fact that decision-makers must choose from hundreds of diverse platforms, which are impossible to evaluate without specialized assistance. As a result, a complete taxonomy is required to expand on the existing low-code platforms and to assist users in determining which platforms are most fit for their needs. We evaluate these claims for four Low-Code platforms in a time-constrained experiment by creating a practical use case. While this was possible in a relatively short period of time for the majority of our use cases, the platforms varied greatly and technical expertise is still necessary for non-trivial applications. This research presents a technical survey of various LCDPs using a proposed conceptual comparative approach. To extract the functions and services that each analyzed platform may provide, a comparable set of characteristics was identified by researching four sample LCDPs. The ultimate goal is to make it easier to comprehend and compare the low-code platforms that can best meet the needs of a given user.
+  - Platforms Investigated: OutSystems, Zoho Creator, Microsoft PowerApps, Salesforce.
+  - Benchmark System: Contact Management Application (Login, User, Contacts ER model and CRUD operations).
+  - Key Findings: LCDPs successfully consolidate traditional toolchains into a single visual environment; however, technical expertise is still necessary for non-trivial applications; platforms lack integration with dynamic application security testing (DAST) analyzing vulnerabilities during runtime.
 
 ## Technical Projects & Architecture
 1. RunLens — Test Run Reliability Dashboard

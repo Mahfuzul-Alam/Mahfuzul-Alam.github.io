@@ -90,8 +90,8 @@ export const education: EducationItem = {
   thesis: {
     title: "A Comparison of Low Code Development Platforms in Terms of Convenience",
     overview:
-      "A systematic evaluation of leading low-code development platforms examining developer productivity, learning curve, functional extensibility, and interface ergonomics.",
+      "A 6-month empirical comparative investigation of development convenience across four major platforms (OutSystems, Zoho Creator, Microsoft PowerApps, and Salesforce) through the implementation of a benchmark Contact Management Application.",
     significance:
-      "Investigated how visual and declarative abstraction layers influence software development lifecycle speed and non-functional requirements.",
+      "Demonstrated that while LCDPs successfully consolidate fragmented toolchains and accelerate baseline CRUD workflows, technical software engineering expertise is indispensable for non-trivial business logic, third-party integrations, and runtime security.",
   },
 };
