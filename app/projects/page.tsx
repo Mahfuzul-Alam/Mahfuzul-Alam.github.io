@@ -47,7 +47,7 @@ export default function ProjectsPage() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
                   active
-                    ? "bg-apple-text text-white dark:bg-white dark:text-black shadow-apple-sm"
+                    ? "bg-neutral-900 text-white dark:bg-white dark:text-black shadow-apple-sm"
                     : "bg-apple-subtle text-apple-secondary hover:text-apple-text hover:bg-black/5 dark:bg-white/5 dark:text-apple-secondary dark:hover:text-white"
                 }`}
               >

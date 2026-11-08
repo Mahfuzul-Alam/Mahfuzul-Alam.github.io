@@ -335,7 +335,7 @@ export default function AboutPage() {
         {/* Download Resume Banner */}
         <section className="p-8 rounded-3xl bg-apple-subtle border border-apple-border text-center space-y-4">
           <h3 className="text-lg font-semibold text-apple-text">
-            Need a formal copy of my CV?
+            Need a formal copy of my resume?
           </h3>
           <p className="text-xs text-apple-secondary max-w-md mx-auto">
             Review my complete career history, technical stack, and verified references in a clean printable PDF.
@@ -343,11 +343,11 @@ export default function AboutPage() {
           <div className="pt-2 flex items-center justify-center gap-3">
             <a
               href={assetPath(personalData.resumeUrl)}
-              download="Mahfuzul_Alam_CV.pdf"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium text-white bg-apple-text dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple"
+              download="Mahfuzul_Alam_Resume.pdf"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple"
             >
               <FileText className="w-3.5 h-3.5" />
-              <span>Download CV (PDF)</span>
+              <span>Download Resume (PDF)</span>
             </a>
             <a
               href={personalData.linkedin}

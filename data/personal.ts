@@ -34,7 +34,7 @@ export const personalData: PersonalData = {
   github: "https://github.com/Mahfuzul-Alam",
   linkedin: "https://www.linkedin.com/in/1-mahfuzul-alam/",
   photoUrl: "/images/mahfuzul-alam.jpg",
-  resumeUrl: "/documents/Mahfuzul_Alam_CV.pdf",
+  resumeUrl: "/documents/Mahfuzul_Alam_Resume.pdf",
   highlights: [
     {
       label: "Professional Focus",

@@ -36,7 +36,7 @@ export function Hero() {
             <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4">
               <Link
                 href="/projects/"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-white bg-apple-text dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple hover:shadow-apple-md"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple hover:shadow-apple-md"
               >
                 <span>Explore Projects</span>
                 <ArrowRight className="w-4 h-4" />
@@ -44,11 +44,11 @@ export function Hero() {
 
               <a
                 href={assetPath(personalData.resumeUrl)}
-                download="Mahfuzul_Alam_CV.pdf"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-apple-text bg-white border border-apple-border hover:bg-apple-subtle transition-all shadow-apple-sm"
+                download="Mahfuzul_Alam_Resume.pdf"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-apple-text dark:text-white bg-white dark:bg-[#1C1C1E] border border-apple-border dark:border-white/20 hover:bg-apple-subtle dark:hover:bg-white/10 transition-all shadow-apple-sm"
               >
-                <FileText className="w-4 h-4 text-apple-secondary" />
-                <span>Download CV</span>
+                <FileText className="w-4 h-4 text-apple-secondary dark:text-slate-400" />
+                <span>Download Resume</span>
               </a>
             </div>
           </div>

@@ -88,7 +88,7 @@ export default async function ProjectCaseStudyPage({
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium text-white bg-apple-text dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
                 <span>Launch Live Application</span>

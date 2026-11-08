@@ -48,7 +48,7 @@ export default function ThankYouPage() {
         <div className="flex items-center justify-center gap-3 pt-2">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-apple-text hover:bg-black transition-all shadow-apple"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple"
           >
             <Home className="w-3.5 h-3.5" />
             <span>Return Home</span>

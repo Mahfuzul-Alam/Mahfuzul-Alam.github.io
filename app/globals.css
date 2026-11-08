@@ -78,17 +78,7 @@
   background-color: #000000 !important;
 }
 
-/* Ensure all buttons with bg-apple-text render crisp black text on white background in dark mode */
-.dark .bg-apple-text.text-white,
-.dark .bg-apple-text {
-  background-color: #F5F5F7 !important;
-  color: #000000 !important;
-}
 
-.dark .bg-apple-text.text-white *,
-.dark .bg-apple-text * {
-  color: #000000 !important;
-}
 
 /* Inputs, textareas & selects in dark mode */
 .dark input,

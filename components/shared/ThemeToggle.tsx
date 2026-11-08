@@ -50,7 +50,7 @@ export function ThemeToggle({ className = "" }: ThemeToggleProps) {
       onClick={toggleTheme}
       aria-label={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
       title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
-      className={`relative w-8 h-8 rounded-full flex items-center justify-center text-apple-secondary hover:text-apple-text bg-white dark:bg-[#1C1C1E] border border-apple-border/80 dark:border-white/10 shadow-apple-xs hover:border-apple-border transition-all duration-200 active:scale-90 ${className}`}
+      className={`relative w-8 h-8 rounded-full flex items-center justify-center text-apple-secondary hover:text-apple-text bg-white dark:bg-[#1C1C1E] border border-slate-300 dark:border-white/30 hover:border-slate-400 dark:hover:border-white/50 shadow-apple-xs transition-all duration-200 active:scale-90 ${className}`}
     >
       {isDark ? (
         <Sun className="w-4 h-4 text-amber-400 transition-transform duration-300 rotate-0 hover:rotate-45" />

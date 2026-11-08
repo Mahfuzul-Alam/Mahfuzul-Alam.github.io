@@ -68,7 +68,7 @@ export function CookieBanner() {
           <button
             type="button"
             onClick={() => handleConsent("accepted")}
-            className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full text-[11px] font-medium text-white bg-apple-text hover:bg-black transition-colors shadow-apple-sm"
+            className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full text-[11px] font-medium text-white bg-neutral-900 dark:bg-white dark:text-black hover:bg-black dark:hover:bg-slate-200 transition-colors shadow-apple-sm"
           >
             <Check className="w-3 h-3" />
             <span>Acknowledge</span>

@@ -13,7 +13,7 @@ export function Footer() {
           {/* Identity */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2">
-              <span className="w-6 h-6 rounded-full bg-apple-text text-white dark:text-black flex items-center justify-center text-[10px] font-semibold">
+              <span className="w-6 h-6 rounded-full bg-neutral-900 text-white dark:bg-white/10 dark:text-white dark:border dark:border-white/20 flex items-center justify-center text-[10px] font-semibold">
                 {personalData.initials}
               </span>
               <span className="text-sm font-semibold text-apple-text">

@@ -52,7 +52,7 @@ export function Navbar() {
             aria-label={`${personalData.name} — Home`}
             className="group flex items-center font-medium tracking-tight text-apple-text hover:text-apple-blue transition-colors"
           >
-            <span className="w-8 h-8 rounded-full bg-apple-text text-white dark:text-black flex items-center justify-center text-xs font-semibold tracking-wider group-hover:bg-apple-blue transition-colors">
+            <span className="w-8 h-8 rounded-full bg-neutral-900 text-white dark:bg-white/10 dark:text-white dark:border dark:border-white/20 flex items-center justify-center text-xs font-semibold tracking-wider group-hover:bg-apple-blue dark:group-hover:bg-apple-blue transition-colors">
               {personalData.initials}
             </span>
           </Link>
@@ -77,30 +77,30 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Desktop Right Action: Theme Toggle & Download CV */}
+          {/* Desktop Right Action: Theme Toggle & Download Resume */}
           <div className="hidden md:flex items-center gap-2.5">
             <ThemeToggle />
             <a
               href={assetPath(personalData.resumeUrl)}
-              download="Mahfuzul_Alam_CV.pdf"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white dark:bg-[#1C1C1E] border border-apple-border dark:border-white/10 shadow-apple-sm hover:border-apple-secondary/40 hover:bg-apple-subtle transition-all"
+              download="Mahfuzul_Alam_Resume.pdf"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white dark:bg-[#1C1C1E] border border-slate-300 dark:border-white/30 shadow-apple-xs hover:border-slate-400 dark:hover:border-white/50 hover:bg-apple-subtle transition-all active:scale-95"
             >
               <FileText className="w-3.5 h-3.5 text-apple-secondary" />
               <span>Resume</span>
             </a>
           </div>
 
-          {/* Mobile Right Action: Theme Toggle & Quick CV */}
+          {/* Mobile Right Action: Theme Toggle & Quick Resume */}
           <div className="md:hidden flex items-center gap-2">
             <ThemeToggle />
             <a
               href={assetPath(personalData.resumeUrl)}
-              download="Mahfuzul_Alam_CV.pdf"
-              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white dark:bg-[#1C1C1E] border border-apple-border/80 dark:border-white/10 shadow-apple-xs active:bg-apple-subtle active:scale-95 transition-all"
-              aria-label="Download CV"
+              download="Mahfuzul_Alam_Resume.pdf"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white dark:bg-[#1C1C1E] border border-slate-300 dark:border-white/30 shadow-apple-xs active:bg-apple-subtle active:scale-95 transition-all"
+              aria-label="Download Resume"
             >
               <FileText className="w-3.5 h-3.5 text-apple-secondary" />
-              <span>CV</span>
+              <span>Resume</span>
             </a>
           </div>
         </div>

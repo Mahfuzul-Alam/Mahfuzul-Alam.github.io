@@ -284,7 +284,7 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
             onClick={() => setActiveTab("articles")}
             className={`px-4 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center gap-2 whitespace-nowrap ${
               activeTab === "articles"
-                ? "bg-apple-text text-white shadow-apple-sm"
+                ? "bg-neutral-900 text-white dark:bg-white dark:text-black shadow-apple-sm"
                 : "text-apple-secondary hover:text-apple-text hover:bg-apple-subtle"
             }`}
           >
@@ -297,7 +297,7 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
             onClick={() => setActiveTab("profile")}
             className={`px-4 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center gap-2 whitespace-nowrap ${
               activeTab === "profile"
-                ? "bg-apple-text text-white shadow-apple-sm"
+                ? "bg-neutral-900 text-white dark:bg-white dark:text-black shadow-apple-sm"
                 : "text-apple-secondary hover:text-apple-text hover:bg-apple-subtle"
             }`}
           >
@@ -310,7 +310,7 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
             onClick={() => setActiveTab("llms")}
             className={`px-4 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center gap-2 whitespace-nowrap ${
               activeTab === "llms"
-                ? "bg-apple-text text-white shadow-apple-sm"
+                ? "bg-neutral-900 text-white dark:bg-white dark:text-black shadow-apple-sm"
                 : "text-apple-secondary hover:text-apple-text hover:bg-apple-subtle"
             }`}
           >
@@ -544,7 +544,7 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
                   <button
                     type="button"
                     onClick={handleSaveArticle}
-                    className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold text-white bg-apple-text hover:bg-black transition-colors shadow-apple-sm"
+                    className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold text-white bg-neutral-900 dark:bg-white dark:text-black hover:bg-black dark:hover:bg-slate-200 transition-colors shadow-apple-sm"
                   >
                     <Save className="w-3.5 h-3.5" />
                     <span>{selectedSlug === "new" ? "Add to Articles" : "Update Article"}</span>
@@ -661,7 +661,7 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
               <button
                 type="button"
                 onClick={handleSaveProfile}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold text-white bg-apple-text hover:bg-black transition-colors shadow-apple-sm"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold text-white bg-neutral-900 dark:bg-white dark:text-black hover:bg-black dark:hover:bg-slate-200 transition-colors shadow-apple-sm"
               >
                 <Save className="w-3.5 h-3.5" />
                 <span>Save Profile</span>

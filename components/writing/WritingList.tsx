@@ -50,7 +50,7 @@ export function WritingList({ articles }: WritingListProps) {
               onClick={() => setSelectedCategory(cat)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 ${
                 isSelected
-                  ? "bg-apple-text text-white dark:bg-white dark:text-black shadow-apple-sm"
+                  ? "bg-neutral-900 text-white dark:bg-white dark:text-black shadow-apple-sm"
                   : "bg-apple-subtle text-apple-secondary hover:text-apple-text hover:bg-apple-borderSubtle dark:bg-white/5 dark:text-apple-secondary dark:hover:text-white"
               }`}
             >
