@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { personalData } from "@/data/personal";
-import { SectionHeading } from "@/components/shared/SectionHeading";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { Badge } from "@/components/shared/Badge";
 import {
   Mail,
@@ -108,15 +108,13 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
-        <header className="space-y-4">
-          <SectionHeading
-            eyebrow="Direct Communication"
-            title="Get in Touch"
-            description="Whether you're exploring SDET recruitment, discussing test automation strategies, or inquiring about software quality engineering, I welcome thoughtful collaboration."
-          />
-        </header>
+    <div className="pt-10 sm:pt-14 pb-16 sm:pb-24">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+        <PageHeader
+          eyebrow="Direct Communication"
+          title="Get in Touch"
+          description="Whether you're exploring SDET recruitment, discussing test automation strategies, or inquiring about software quality engineering, I welcome thoughtful collaboration."
+        />
 
         {/* Direct Channels Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

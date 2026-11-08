@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { researchData } from "@/data/research";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { Badge } from "@/components/shared/Badge";
 import {
   BookOpen,
@@ -24,16 +25,13 @@ export default function ResearchPage() {
   const [showMatrix, setShowMatrix] = useState(false);
 
   return (
-    <div className="py-12 sm:py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
-        {/* Header */}
-        <header className="space-y-4">
-          <SectionHeading
-            eyebrow="Academic Research & Inquiries"
-            title="Research & Experiments"
-            description="Engineering studies examining developer ergonomics, test automation architectures, and applied artificial intelligence."
-          />
-        </header>
+    <div className="pt-10 sm:pt-14 pb-16 sm:pb-24">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+        <PageHeader
+          eyebrow="Academic Research & Inquiries"
+          title="Research & Experiments"
+          description="Engineering studies examining developer ergonomics, test automation architectures, and applied artificial intelligence."
+        />
 
         {/* Featured Thesis Card */}
         <section className="space-y-6">

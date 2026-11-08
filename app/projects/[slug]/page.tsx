@@ -51,7 +51,7 @@ export default async function ProjectCaseStudyPage({
   }
 
   return (
-    <article className="py-12 sm:py-20">
+    <article className="pt-10 sm:pt-14 pb-16 sm:pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
         {/* Back Link */}
         <div>

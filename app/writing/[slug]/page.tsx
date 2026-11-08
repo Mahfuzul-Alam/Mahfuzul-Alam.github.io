@@ -70,7 +70,7 @@ export default async function ArticleDetailPage({ params }: ArticleProps) {
     .slice(0, 2);
 
   return (
-    <article className="py-12 sm:py-20">
+    <article className="pt-10 sm:pt-14 pb-16 sm:pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Back Link & Local Action */}
         <div className="flex items-center justify-between gap-4">

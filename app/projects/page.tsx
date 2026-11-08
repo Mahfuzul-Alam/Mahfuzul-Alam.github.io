@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { projects, ProjectCaseStudy } from "@/data/projects";
-import { SectionHeading } from "@/components/shared/SectionHeading";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { Badge } from "@/components/shared/Badge";
 import { ArrowRight, ExternalLink, Github, Filter } from "lucide-react";
 
@@ -24,40 +24,37 @@ export default function ProjectsPage() {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="py-12 sm:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        {/* Header */}
-        <div className="space-y-4">
-          <SectionHeading
-            eyebrow="Portfolio & Case Studies"
-            title="Projects & Engineering Systems"
-            description="Detailed technical case studies of test automation architectures, observability tools, and full-stack software implementations."
-          />
+    <div className="pt-10 sm:pt-14 pb-16 sm:pb-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
+        <PageHeader
+          eyebrow="Portfolio & Case Studies"
+          title="Projects & Engineering Systems"
+          description="Detailed technical case studies of test automation architectures, observability tools, and full-stack software implementations."
+        />
 
-          {/* Category Tabs */}
-          <div className="flex flex-wrap items-center gap-2 pt-2 border-b border-apple-borderSubtle pb-4">
-            <span className="text-xs text-apple-tertiary flex items-center gap-1.5 mr-2">
-              <Filter className="w-3.5 h-3.5" />
-              <span>Filter:</span>
-            </span>
-            {CATEGORIES.map((category) => {
-              const active = selectedCategory === category;
-              return (
-                <button
-                  key={category}
-                  type="button"
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
-                    active
-                      ? "bg-apple-text text-white shadow-apple-sm"
-                      : "bg-apple-subtle text-apple-secondary hover:text-apple-text hover:bg-black/5"
-                  }`}
-                >
-                  {category}
-                </button>
-              );
-            })}
-          </div>
+        {/* Category Tabs */}
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs text-apple-tertiary flex items-center gap-1.5 mr-2">
+            <Filter className="w-3.5 h-3.5" />
+            <span>Filter:</span>
+          </span>
+          {CATEGORIES.map((category) => {
+            const active = selectedCategory === category;
+            return (
+              <button
+                key={category}
+                type="button"
+                onClick={() => setSelectedCategory(category)}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+                  active
+                    ? "bg-apple-text text-white shadow-apple-sm"
+                    : "bg-apple-subtle text-apple-secondary hover:text-apple-text hover:bg-black/5"
+                }`}
+              >
+                {category}
+              </button>
+            );
+          })}
         </div>
 
         {/* Project Grid */}

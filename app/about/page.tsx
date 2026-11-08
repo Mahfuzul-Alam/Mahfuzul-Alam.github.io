@@ -6,6 +6,7 @@ import { experiences, education } from "@/data/experience";
 import { skillCategories, certifications } from "@/data/skills";
 import { assetPath } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { Badge } from "@/components/shared/Badge";
 import {
   GraduationCap,
@@ -27,16 +28,17 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="py-12 sm:py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
-        {/* Intro Section */}
-        <section className="space-y-8">
-          <SectionHeading
-            eyebrow="Biography & Background"
-            title="About Mahfuzul Alam"
-            description="Software Development Engineer in Test (SDET) committed to building resilient software architectures through automated verification, engineering-driven QA, and applied AI."
-          />
+    <div className="pt-10 sm:pt-14 pb-16 sm:pb-24">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+        {/* Intro Section Header */}
+        <PageHeader
+          eyebrow="Biography & Background"
+          title="About Mahfuzul Alam"
+          description="Software Development Engineer in Test (SDET) committed to building resilient software architectures through automated verification, engineering-driven QA, and applied AI."
+        />
 
+        {/* Biography Card */}
+        <section>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8 rounded-3xl bg-white border border-apple-border/80 shadow-apple-sm">
             <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden relative flex-shrink-0 border border-apple-border shadow-apple-sm p-1.5 bg-white">
               <div className="w-full h-full rounded-[14px] overflow-hidden relative">
