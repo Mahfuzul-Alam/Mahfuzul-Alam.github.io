@@ -4,6 +4,7 @@ import Link from "next/link";
 import { articles } from "@/data/articles";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Badge } from "@/components/shared/Badge";
+import { WritingPageLocalAction } from "@/components/shared/LocalEditorLinks";
 import { ArrowRight, BookOpen, Clock, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -17,11 +18,16 @@ export default function WritingPage() {
     <div className="py-12 sm:py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
         <header className="space-y-4">
-          <SectionHeading
-            eyebrow="Technical Essays & Notes"
-            title="Engineering Writing"
-            description="Deep dives into test automation architectures, empirical flakiness classification, and practical AI augmentation for software quality teams."
-          />
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <SectionHeading
+              eyebrow="Technical Essays & Notes"
+              title="Engineering Writing"
+              description="Deep dives into test automation architectures, empirical flakiness classification, and practical AI augmentation for software quality teams."
+            />
+            <div className="mb-10 sm:mb-12">
+              <WritingPageLocalAction />
+            </div>
+          </div>
         </header>
 
         {/* Article Listing */}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles, Article } from "@/data/articles";
 import { Badge } from "@/components/shared/Badge";
+import { SingleArticleLocalAction } from "@/components/shared/LocalEditorLinks";
 import { ArrowLeft, Clock, Calendar, BookOpen } from "lucide-react";
 
 interface ArticleProps {
@@ -40,8 +41,8 @@ export default async function ArticleDetailPage({ params }: ArticleProps) {
   return (
     <article className="py-12 sm:py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        {/* Back Link */}
-        <div>
+        {/* Back Link & Local Edit Action */}
+        <div className="flex items-center justify-between gap-4">
           <Link
             href="/writing/"
             className="inline-flex items-center gap-1.5 text-xs font-medium text-apple-secondary hover:text-apple-text transition-colors"
@@ -49,6 +50,7 @@ export default async function ArticleDetailPage({ params }: ArticleProps) {
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to Writing</span>
           </Link>
+          <SingleArticleLocalAction slug={article.slug} />
         </div>
 
         {/* Header */}

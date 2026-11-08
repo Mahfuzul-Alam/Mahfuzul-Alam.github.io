@@ -55,8 +55,8 @@ export default function AdminPage() {
   const [profile, setProfile] = useState<PersonalData>(personalData);
   const [profileSaved, setProfileSaved] = useState(false);
 
-  // Article Form State
   const [articleList, setArticleList] = useState<Article[]>(articles);
+  const [selectedSlug, setSelectedSlug] = useState<string>("new");
   const [newArticle, setNewArticle] = useState<Partial<Article>>({
     title: "",
     subtitle: "",
@@ -75,6 +75,45 @@ export default function AdminPage() {
 
   const [activeArticleIndex, setActiveArticleIndex] = useState<number | null>(null);
   const [articleSuccess, setArticleSuccess] = useState(false);
+
+  // Load article when selection changes
+  const handleSelectArticle = (slug: string) => {
+    setSelectedSlug(slug);
+    if (slug === "new") {
+      setNewArticle({
+        title: "",
+        subtitle: "",
+        slug: "",
+        category: "Software Quality & Reliability",
+        readingTime: "5 min read",
+        summary: "",
+        content: [
+          {
+            sectionTitle: "Introduction & Context",
+            paragraphs: [""],
+          },
+        ],
+        references: [],
+      });
+    } else {
+      const found = articleList.find((a) => a.slug === slug);
+      if (found) {
+        setNewArticle(JSON.parse(JSON.stringify(found)));
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const editSlug = params.get("edit");
+      const tabParam = params.get("tab") as AdminTab;
+      if (tabParam) setActiveTab(tabParam);
+      if (editSlug) {
+        handleSelectArticle(editSlug);
+      }
+    }
+  }, []);
 
   // Auto-generate slug from title
   const handleTitleChange = (title: string) => {
@@ -120,10 +159,12 @@ export default function AdminPage() {
       slug: newArticle.slug,
       title: newArticle.title,
       subtitle: newArticle.subtitle || "",
-      date: new Date().toLocaleDateString("en-US", {
-        month: "long",
-        year: "numeric",
-      }),
+      date:
+        newArticle.date ||
+        new Date().toLocaleDateString("en-US", {
+          month: "long",
+          year: "numeric",
+        }),
       readingTime: newArticle.readingTime || "5 min read",
       category: newArticle.category || "Software Quality & Reliability",
       summary: newArticle.summary || "",
@@ -131,9 +172,54 @@ export default function AdminPage() {
       references: newArticle.references || [],
     };
 
-    setArticleList([fullArticle, ...articleList]);
+    let updatedList: Article[];
+    if (selectedSlug === "new") {
+      updatedList = [fullArticle, ...articleList];
+      setSelectedSlug(fullArticle.slug);
+    } else {
+      updatedList = articleList.map((a) =>
+        a.slug === selectedSlug ? fullArticle : a
+      );
+    }
+
+    setArticleList(updatedList);
     setArticleSuccess(true);
-    setTimeout(() => setArticleSuccess(false), 3000);
+    setTimeout(() => setArticleSuccess(false), 4000);
+  };
+
+  const getFullArticlesCode = () => {
+    return `export interface Article {
+  slug: string;
+  title: string;
+  subtitle: string;
+  date: string;
+  readingTime: string;
+  category: string;
+  summary: string;
+  content: {
+    sectionTitle: string;
+    paragraphs: string[];
+    codeBlock?: {
+      language: string;
+      code: string;
+    };
+  }[];
+  references: string[];
+}
+
+export const articles: Article[] = ${JSON.stringify(articleList, null, 2)};
+`;
+  };
+
+  const downloadFullArticlesFile = () => {
+    const code = getFullArticlesCode();
+    const blob = new Blob([code], { type: "text/typescript" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "articles.ts";
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   const downloadArticleCode = () => {
@@ -241,11 +327,37 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
               <div className="p-7 rounded-3xl bg-white border border-apple-border/80 shadow-apple-sm space-y-5">
                 <div className="flex items-center justify-between pb-3 border-b border-apple-borderSubtle">
                   <h2 className="text-base font-semibold text-apple-text">
-                    Compose SEO Article
+                    {selectedSlug === "new" ? "Compose New SEO Article" : "Edit Existing Article"}
                   </h2>
                   <span className="text-[11px] text-apple-tertiary">
-                    Draft &amp; Instant Code Export
+                    Visual Editor &amp; Instant Code Export
                   </span>
+                </div>
+
+                {/* Article Selector */}
+                <div className="space-y-1.5 p-3.5 rounded-2xl bg-apple-subtle border border-apple-border">
+                  <div className="flex items-center justify-between text-xs font-semibold text-apple-text">
+                    <span>Select Article to Edit:</span>
+                    <button
+                      type="button"
+                      onClick={() => handleSelectArticle("new")}
+                      className="text-[11px] text-apple-blue hover:underline font-medium"
+                    >
+                      + Create New Article
+                    </button>
+                  </div>
+                  <select
+                    value={selectedSlug}
+                    onChange={(e) => handleSelectArticle(e.target.value)}
+                    className="w-full px-3 py-2 rounded-xl text-xs bg-white border border-apple-border focus:border-apple-blue focus:outline-none"
+                  >
+                    <option value="new">+ Write New Article</option>
+                    {articleList.map((a) => (
+                      <option key={a.slug} value={a.slug}>
+                        {a.title} ({a.date})
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 {/* Title */}
@@ -397,15 +509,37 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
                 </div>
 
                 {/* Actions */}
-                <div className="pt-4 border-t border-apple-borderSubtle flex items-center justify-between gap-3">
-                  <button
-                    type="button"
-                    onClick={downloadArticleCode}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-apple-text bg-apple-subtle border border-apple-border hover:bg-apple-borderSubtle transition-colors"
-                  >
-                    <Download className="w-3.5 h-3.5 text-apple-secondary" />
-                    <span>Download .ts File</span>
-                  </button>
+                <div className="pt-4 border-t border-apple-borderSubtle flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={downloadFullArticlesFile}
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-apple-text bg-apple-subtle border border-apple-border hover:bg-apple-borderSubtle transition-colors"
+                      title="Download complete data/articles.ts to drop into your codebase"
+                    >
+                      <Download className="w-3.5 h-3.5 text-apple-secondary" />
+                      <span>Download articles.ts</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => copyToClipboard(getFullArticlesCode(), "full-articles-code")}
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium text-apple-secondary hover:text-apple-text bg-apple-subtle hover:bg-apple-borderSubtle border border-apple-border/60 transition-colors"
+                      title="Copy complete data/articles.ts code to clipboard"
+                    >
+                      {copiedState === "full-articles-code" ? (
+                        <>
+                          <Check className="w-3.5 h-3.5 text-apple-green" />
+                          <span>Copied Code!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-3.5 h-3.5" />
+                          <span>Copy articles.ts Code</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
 
                   <button
                     type="button"
@@ -413,14 +547,19 @@ export const article = ${JSON.stringify(newArticle, null, 2)};
                     className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold text-white bg-apple-text hover:bg-black transition-colors shadow-apple-sm"
                   >
                     <Save className="w-3.5 h-3.5" />
-                    <span>Save to Session</span>
+                    <span>{selectedSlug === "new" ? "Add to Articles" : "Update Article"}</span>
                   </button>
                 </div>
 
                 {articleSuccess && (
-                  <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 flex items-center gap-2">
-                    <Check className="w-4 h-4 text-emerald-600" />
-                    <span>Article draft saved to browser session and ready for static inclusion!</span>
+                  <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 space-y-1">
+                    <div className="flex items-center gap-2 font-semibold">
+                      <Check className="w-4 h-4 text-emerald-600" />
+                      <span>Article &ldquo;{newArticle.title}&rdquo; successfully saved!</span>
+                    </div>
+                    <p className="text-[11px] text-emerald-700 leading-relaxed pl-6">
+                      Click <strong>&ldquo;Download articles.ts&rdquo;</strong> or <strong>&ldquo;Copy articles.ts Code&rdquo;</strong> to save it directly into your <code>data/articles.ts</code> file.
+                    </p>
                   </div>
                 )}
               </div>
