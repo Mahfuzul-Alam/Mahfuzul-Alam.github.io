@@ -17,6 +17,8 @@ import {
   Linkedin,
   Github,
   BookOpen,
+  ExternalLink,
+  ArrowUpRight,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -296,19 +298,46 @@ export default function AboutPage() {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="p-5 rounded-2xl bg-white border border-apple-border/70 shadow-apple-sm space-y-2"
+                className="p-5 rounded-2xl bg-white border border-apple-border/70 shadow-apple-sm flex flex-col justify-between space-y-3 hover:shadow-apple transition-all"
               >
-                <Award className="w-5 h-5 text-apple-blue" />
-                <h4 className="text-xs font-semibold text-apple-text leading-snug">
-                  {cert.title}
-                </h4>
-                <div className="text-[11px] text-apple-tertiary">
-                  {cert.issuer} • {cert.type}
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <Award className="w-5 h-5 text-apple-blue" />
+                    {cert.verificationUrl && (
+                      <a
+                        href={cert.verificationUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-apple-tertiary hover:text-apple-blue transition-colors p-1"
+                        title="View Official Certificate"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
+                  <h4 className="text-xs font-semibold text-apple-text leading-snug">
+                    {cert.title}
+                  </h4>
+                  <div className="text-[11px] text-apple-tertiary">
+                    {cert.issuer} • {cert.type}
+                  </div>
                 </div>
-                <div className="pt-2">
+
+                <div className="pt-2 border-t border-apple-borderSubtle flex items-center justify-between gap-2">
                   <Badge variant="green" size="sm">
-                    Verified Completion
+                    Verified
                   </Badge>
+                  {cert.verificationUrl && (
+                    <a
+                      href={cert.verificationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-[11px] font-semibold text-apple-blue hover:text-apple-blueHover transition-colors"
+                    >
+                      <span>Certificate</span>
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

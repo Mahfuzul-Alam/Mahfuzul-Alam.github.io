@@ -9,6 +9,7 @@ export interface Certification {
   issuer: string;
   type: string;
   verified: boolean;
+  verificationUrl?: string;
 }
 
 export const skillCategories: SkillCategory[] = [
@@ -74,17 +75,20 @@ export const certifications: Certification[] = [
     issuer: "Udemy",
     type: "Automation Frameworks",
     verified: true,
+    verificationUrl: "https://www.udemy.com/certificate/UC-3aa47bc4-df09-4288-a92f-36f51b455825/",
   },
   {
     title: "Building Test Automation Framework using Selenium and TestNG",
     issuer: "Coursera",
     type: "Enterprise Automation",
     verified: true,
+    verificationUrl: "https://www.coursera.org/account/accomplishments/verify/5LBQLXKGEMFF",
   },
   {
     title: "Performance Testing with JMeter",
     issuer: "Coursera",
     type: "Load & Stress Testing",
     verified: true,
+    verificationUrl: "https://www.coursera.org/account/accomplishments/verify/HLTZAULBPN8J",
   },
 ];
