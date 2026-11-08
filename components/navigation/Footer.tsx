@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { personalData } from "@/data/personal";
-import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight, Phone } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -88,6 +88,15 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href={`tel:${personalData.phone}`}
+                  className="inline-flex items-center gap-1.5 hover:text-apple-blue transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>{personalData.phone}</span>
+                </a>
+              </li>
+              <li>
+                <a
                   href={personalData.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -119,14 +128,8 @@ export function Footer() {
           <div>
             © {currentYear} {personalData.name}. All rights reserved.
           </div>
-          <div className="flex items-center gap-4 text-apple-secondary">
-            <a href={`tel:${personalData.phone}`} className="hover:text-apple-blue transition-colors">
-              {personalData.phone}
-            </a>
-            <span>•</span>
-            <Link href="/contact/" className="hover:text-apple-blue transition-colors">
-              Contact
-            </Link>
+          <div>
+            Dhaka, Bangladesh • GMT+6
           </div>
         </div>
       </div>
