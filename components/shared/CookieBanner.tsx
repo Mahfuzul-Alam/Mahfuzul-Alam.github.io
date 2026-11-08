@@ -31,7 +31,7 @@ export function CookieBanner() {
   return (
     <aside
       aria-label="Privacy and cookies notice"
-      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-50 animate-fade-up"
+      className="fixed bottom-16 sm:bottom-6 left-3 right-3 sm:left-auto sm:right-6 sm:max-w-md z-50 animate-fade-up"
     >
       <div className="p-4 sm:p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-apple-border shadow-apple-hover flex flex-col gap-3">
         <div className="flex items-start justify-between gap-3">

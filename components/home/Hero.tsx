@@ -81,16 +81,16 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Genuine Portrait Photo */}
-          <div className="flex-shrink-0">
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-3xl overflow-hidden border border-apple-border/80 shadow-apple-md bg-white p-1.5 transition-transform duration-300 hover:scale-[1.01]">
-              <div className="w-full h-full rounded-[22px] overflow-hidden bg-apple-subtle relative">
+          {/* Portrait Photo */}
+          <div className="flex-shrink-0 w-full md:w-auto flex justify-center">
+            <div className="w-52 h-52 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-3xl overflow-hidden border border-apple-border/80 shadow-apple-md bg-white p-2 transition-transform duration-300 hover:scale-[1.01]">
+              <div className="w-full h-full rounded-[20px] overflow-hidden bg-apple-subtle relative">
                 <Image
                   src={assetPath(personalData.photoUrl)}
-                  alt={`Mahfuzul Alam — Software Development Engineer in Test (SDET)`}
+                  alt="Mahfuzul Alam — Software Development Engineer in Test (SDET)"
                   fill
-                  sizes="(max-width: 768px) 224px, 256px"
-                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, 256px"
+                  className="object-cover object-center"
                   priority
                 />
               </div>

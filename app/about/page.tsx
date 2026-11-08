@@ -36,15 +36,18 @@ export default function AboutPage() {
             description="Software Development Engineer in Test (SDET) committed to building resilient software architectures through automated verification, engineering-driven QA, and applied AI."
           />
 
-          <div className="flex flex-col md:flex-row items-start gap-8 p-8 rounded-3xl bg-white border border-apple-border/80 shadow-apple-sm">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden relative flex-shrink-0 border border-apple-border shadow-apple-sm">
-              <Image
-                src={assetPath(personalData.photoUrl)}
-                alt={personalData.name}
-                fill
-                className="object-cover object-top"
-                priority
-              />
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8 rounded-3xl bg-white border border-apple-border/80 shadow-apple-sm">
+            <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden relative flex-shrink-0 border border-apple-border shadow-apple-sm p-1.5 bg-white">
+              <div className="w-full h-full rounded-[12px] overflow-hidden relative">
+                <Image
+                  src={assetPath(personalData.photoUrl)}
+                  alt={personalData.name}
+                  fill
+                  sizes="(max-width: 640px) 144px, 176px"
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
             </div>
             <div className="space-y-4 text-sm text-apple-secondary leading-relaxed">
               <p>
