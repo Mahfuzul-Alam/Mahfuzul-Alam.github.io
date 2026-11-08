@@ -3,7 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/navigation/Footer";
 import { CookieBanner } from "@/components/shared/CookieBanner";
-import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
+import { MobileBottomDock } from "@/components/navigation/MobileBottomDock";
 import { Analytics } from "@/components/shared/Analytics";
 import { personalData } from "@/data/personal";
 
@@ -70,12 +70,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased bg-apple-bg text-apple-text min-h-screen flex flex-col selection:bg-apple-blue selection:text-white pb-14 sm:pb-0">
+      <body className="font-sans antialiased bg-apple-bg text-apple-text min-h-screen flex flex-col selection:bg-apple-blue selection:text-white pb-20 md:pb-0">
         <Analytics />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <MobileStickyBar />
+        <MobileBottomDock />
         <CookieBanner />
       </body>
     </html>

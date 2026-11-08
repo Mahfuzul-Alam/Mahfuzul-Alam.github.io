@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { personalData } from "@/data/personal";
 import { assetPath } from "@/lib/utils";
-import { Menu, X, ArrowUpRight, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -18,7 +18,6 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const pathname = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,11 +27,6 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Close mobile menu when navigating
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -50,7 +44,7 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo / Monogram */}
           <Link
             href="/"
@@ -82,7 +76,7 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Right Action: Download CV */}
+          {/* Desktop Right Action: Download CV */}
           <div className="hidden md:flex items-center gap-3">
             <a
               href={assetPath(personalData.resumeUrl)}
@@ -94,66 +88,20 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-apple-secondary hover:text-apple-text hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-apple-blue"
-            aria-expanded={mobileMenuOpen}
-            aria-label="Toggle navigation menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Drawer Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-b border-apple-border bg-white px-4 pt-2 pb-6 space-y-2 animate-fade-in shadow-apple-md">
-          <nav className="flex flex-col space-y-1">
-            {NAV_LINKS.map((link) => {
-              const active = isActive(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                    active
-                      ? "text-apple-blue bg-apple-blueLight font-semibold"
-                      : "text-apple-secondary hover:text-apple-text hover:bg-apple-subtle"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
-
-          <div className="pt-4 border-t border-apple-borderSubtle flex flex-col gap-2">
+          {/* Mobile Right Action: Quick CV Download */}
+          <div className="md:hidden flex items-center">
             <a
               href={assetPath(personalData.resumeUrl)}
               download="Mahfuzul_Alam_CV.pdf"
-              className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-sm font-medium text-apple-text bg-apple-subtle border border-apple-border hover:bg-apple-borderSubtle transition-colors"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white border border-apple-border/80 shadow-apple-xs active:bg-apple-subtle active:scale-95 transition-all"
+              aria-label="Download CV"
             >
-              <FileText className="w-4 h-4 text-apple-secondary" />
-              <span>Download CV</span>
-            </a>
-            <a
-              href={personalData.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 w-full py-2 px-4 text-xs font-medium text-apple-secondary hover:text-apple-blue"
-            >
-              <span>Connect on LinkedIn</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <FileText className="w-3.5 h-3.5 text-apple-secondary" />
+              <span>CV</span>
             </a>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
