@@ -43,7 +43,7 @@ export function MobileBottomDock() {
       aria-label="Mobile Navigation Dock"
       className="md:hidden fixed bottom-2.5 inset-x-2.5 sm:inset-x-auto sm:left-1/2 sm:-translate-x-1/2 sm:w-[420px] z-50 animate-fade-up select-none"
     >
-      <div className="bg-white border border-apple-border/80 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl p-1 sm:p-1.5 flex items-center justify-between gap-0.5 pb-[max(0.25rem,env(safe-area-inset-bottom,0px))]">
+      <div className="bg-white border border-apple-border/90 shadow-[0_10px_35px_rgba(0,0,0,0.14)] rounded-2xl p-1.5 flex items-center justify-between gap-1 pb-[max(0.35rem,env(safe-area-inset-bottom,0px))]">
         {DOCK_ITEMS.map((item) => {
           const Icon = item.icon;
           const active = isActive(item.href);
@@ -53,20 +53,31 @@ export function MobileBottomDock() {
               key={item.href}
               href={item.href}
               aria-label={item.label}
-              className={`flex-1 flex flex-col items-center justify-center py-1.5 px-0.5 rounded-xl transition-all duration-200 active:scale-90 min-h-[44px] ${
+              className={`relative flex-1 flex flex-col items-center justify-center py-1.5 px-0.5 rounded-xl transition-all duration-200 active:scale-90 min-h-[44px] ${
                 active
-                  ? "text-apple-blue font-semibold bg-apple-blueLight/70 shadow-apple-xs"
-                  : "text-apple-secondary hover:text-apple-text active:bg-black/5"
+                  ? "bg-blue-50/90 text-[#0071e3] border border-blue-200/60 shadow-[0_2px_8px_rgba(0,113,227,0.15)]"
+                  : "text-slate-500 hover:text-apple-text active:bg-slate-100/70"
               }`}
             >
               <Icon
                 className={`w-4 h-4 mb-0.5 transition-transform duration-200 ${
-                  active ? "scale-110 stroke-[2.25]" : "stroke-[1.75]"
+                  active
+                    ? "scale-110 stroke-[2.25] text-[#0071e3] drop-shadow-[0_1px_3px_rgba(0,113,227,0.3)]"
+                    : "stroke-[1.75] text-slate-500"
                 }`}
               />
-              <span className="text-[10px] leading-none tracking-tight">
+              <span
+                className={`text-[10px] leading-none tracking-tight ${
+                  active ? "font-semibold text-[#0071e3]" : "font-medium"
+                }`}
+              >
                 {item.label}
               </span>
+
+              {/* Luminous Micro-Indicator Dot */}
+              {active && (
+                <span className="w-1 h-1 rounded-full bg-[#0071e3] shadow-[0_0_6px_#0071e3] mt-0.5 animate-pulse" />
+              )}
             </Link>
           );
         })}
