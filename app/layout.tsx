@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://mahfuzul-alam.github.io/",
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+  },
   authors: [{ name: personalData.name, url: personalData.github }],
   creator: personalData.name,
   openGraph: {
