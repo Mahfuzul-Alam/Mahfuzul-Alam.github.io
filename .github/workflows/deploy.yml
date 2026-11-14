@@ -55,5 +55,9 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+      - name: Checkout for IndexNow notification
+        uses: actions/checkout@v4
+
       - name: Notify IndexNow (Bing & AI Search Engines)
+        continue-on-error: true
         run: node scripts/submit-indexnow.mjs
