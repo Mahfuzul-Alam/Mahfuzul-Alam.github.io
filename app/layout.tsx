@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     canonical: "https://mahfuzul-alam.github.io/",
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    google: "BgZm8HG7YVZz2QO7pLeFe8e3M2JJzKVl_QUeCvSn1AY",
   },
   authors: [{ name: personalData.name, url: personalData.github }],
   creator: personalData.name,
