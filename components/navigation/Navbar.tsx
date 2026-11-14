@@ -58,17 +58,17 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-1.5">
             {NAV_LINKS.map((link) => {
               const active = isActive(link.href);
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                  className={`px-3.5 py-1.5 rounded-full text-[13.5px] font-medium transition-all ${
                     active
-                      ? "text-apple-text bg-black/5 font-semibold"
-                      : "text-apple-secondary hover:text-apple-text hover:bg-black/[0.03]"
+                      ? "text-apple-text bg-black/5 dark:bg-white/10 font-semibold"
+                      : "text-apple-secondary hover:text-apple-text hover:bg-black/[0.03] dark:hover:bg-white/5"
                   }`}
                 >
                   {link.label}
@@ -83,7 +83,7 @@ export function Navbar() {
             <a
               href={assetPath(personalData.resumeUrl)}
               download="Mahfuzul_Alam_Resume.pdf"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-apple-text bg-white dark:bg-[#1C1C1E] border border-slate-300 dark:border-white/30 shadow-apple-xs hover:border-slate-400 dark:hover:border-white/50 hover:bg-apple-subtle transition-all active:scale-95"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] font-medium text-apple-text bg-white dark:bg-[#1C1C1E] border border-slate-300 dark:border-white/30 shadow-apple-xs hover:border-slate-400 dark:hover:border-white/50 hover:bg-apple-subtle transition-all active:scale-95"
             >
               <FileText className="w-3.5 h-3.5 text-apple-secondary" />
               <span>Resume</span>

@@ -24,11 +24,11 @@ export function PageHeader({
               {eyebrow}
             </span>
           )}
-          <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-semibold tracking-tight text-apple-text leading-[1.15]">
+          <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-semibold tracking-tight text-apple-text leading-[1.15]">
             {title}
           </h1>
           {description && (
-            <p className="text-sm sm:text-base text-apple-secondary leading-relaxed pt-1">
+            <p className="text-base sm:text-[17px] text-apple-secondary leading-relaxed pt-1.5">
               {description}
             </p>
           )}

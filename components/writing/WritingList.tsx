@@ -83,17 +83,17 @@ export function WritingList({ articles }: WritingListProps) {
           </div>
 
           <div className="space-y-2.5">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-apple-text tracking-tight hover:text-apple-blue transition-colors leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-apple-text tracking-tight hover:text-apple-blue transition-colors leading-tight">
               <Link href={`/writing/${featuredArticle.slug}/`}>
                 {featuredArticle.title}
               </Link>
             </h2>
-            <p className="text-sm sm:text-base text-apple-secondary font-medium leading-relaxed">
+            <p className="text-base sm:text-lg text-apple-secondary font-medium leading-relaxed">
               {featuredArticle.subtitle}
             </p>
           </div>
 
-          <p className="text-sm text-apple-secondary/90 leading-relaxed max-w-3xl">
+          <p className="text-[15px] sm:text-[16px] text-apple-secondary/90 leading-relaxed max-w-3xl">
             {featuredArticle.summary}
           </p>
 
@@ -113,7 +113,7 @@ export function WritingList({ articles }: WritingListProps) {
 
             <Link
               href={`/writing/${featuredArticle.slug}/`}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-apple-blue hover:text-apple-blueHover"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-[13.5px] font-semibold text-apple-blue hover:text-apple-blueHover"
             >
               <span>Read Full Article</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -156,11 +156,11 @@ export function WritingList({ articles }: WritingListProps) {
                 <Link href={`/writing/${article.slug}/`}>{article.title}</Link>
               </h3>
 
-              <p className="text-xs sm:text-sm text-apple-secondary font-medium leading-relaxed">
+              <p className="text-[13.5px] sm:text-[15px] text-apple-secondary font-medium leading-relaxed">
                 {article.subtitle}
               </p>
 
-              <p className="text-sm text-apple-secondary/90 leading-relaxed">
+              <p className="text-[14.5px] sm:text-[15.5px] text-apple-secondary/90 leading-relaxed">
                 {article.summary}
               </p>
 

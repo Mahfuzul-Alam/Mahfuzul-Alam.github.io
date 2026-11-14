@@ -52,7 +52,7 @@ export default function AboutPage() {
                 />
               </div>
             </div>
-            <div className="space-y-4 text-sm text-apple-secondary leading-relaxed">
+            <div className="space-y-4 text-[15px] sm:text-[16.5px] text-apple-secondary leading-relaxed">
               <p>
                 I am a <strong>Software Development Engineer in Test (SDET)</strong> based in Dhaka, Bangladesh, with more than 2.5 years of industry experience across manual and automated testing.
               </p>
@@ -79,10 +79,10 @@ export default function AboutPage() {
               <div className="w-8 h-8 rounded-xl bg-apple-blueLight text-apple-blue flex items-center justify-center font-semibold text-xs">
                 01
               </div>
-              <h3 className="text-base font-semibold text-apple-text tracking-tight">
+              <h3 className="text-base sm:text-[17px] font-semibold text-apple-text tracking-tight">
                 Determinism Over Quantity
               </h3>
-              <p className="text-xs text-apple-secondary leading-relaxed">
+              <p className="text-[13px] sm:text-sm text-apple-secondary leading-relaxed">
                 A suite of 50 fast, deterministic automated tests that engineers trust is infinitely more valuable than 500 flaky tests that are routinely ignored or re-run until green.
               </p>
             </div>
@@ -91,10 +91,10 @@ export default function AboutPage() {
               <div className="w-8 h-8 rounded-xl bg-apple-blueLight text-apple-blue flex items-center justify-center font-semibold text-xs">
                 02
               </div>
-              <h3 className="text-base font-semibold text-apple-text tracking-tight">
+              <h3 className="text-base sm:text-[17px] font-semibold text-apple-text tracking-tight">
                 Shift-Left Quality
               </h3>
-              <p className="text-xs text-apple-secondary leading-relaxed">
+              <p className="text-[13px] sm:text-sm text-apple-secondary leading-relaxed">
                 Defects are cheapest to prevent during requirement refinement. I actively analyze specifications for edge cases and ambiguous boundary states before code is committed.
               </p>
             </div>
@@ -103,10 +103,10 @@ export default function AboutPage() {
               <div className="w-8 h-8 rounded-xl bg-apple-blueLight text-apple-blue flex items-center justify-center font-semibold text-xs">
                 03
               </div>
-              <h3 className="text-base font-semibold text-apple-text tracking-tight">
+              <h3 className="text-base sm:text-[17px] font-semibold text-apple-text tracking-tight">
                 Intelligent Augmentation
               </h3>
-              <p className="text-xs text-apple-secondary leading-relaxed">
+              <p className="text-[13px] sm:text-sm text-apple-secondary leading-relaxed">
                 Leveraging LLMs and declarative workflows not as black-box replacements for human engineers, but as cognitive force multipliers for exhaustive test scenario design.
               </p>
             </div>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <p className="text-sm text-apple-secondary leading-relaxed">
+                <p className="text-[15px] sm:text-[16px] text-apple-secondary leading-relaxed">
                   {exp.summary}
                 </p>
 
@@ -159,7 +159,7 @@ export default function AboutPage() {
                     {exp.highlights.map((item, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-2.5 text-xs text-apple-secondary leading-relaxed"
+                        className="flex items-start gap-2.5 text-[13px] sm:text-sm text-apple-secondary leading-relaxed"
                       >
                         <CheckCircle2 className="w-4 h-4 text-apple-blue flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
@@ -179,10 +179,10 @@ export default function AboutPage() {
                         key={proj.name}
                         className="p-4 rounded-xl bg-apple-subtle border border-apple-border/50 space-y-2"
                       >
-                        <div className="text-xs font-semibold text-apple-text">
+                        <div className="text-xs sm:text-[13px] font-semibold text-apple-text">
                           {proj.name}
                         </div>
-                        <p className="text-[11px] text-apple-secondary leading-relaxed">
+                        <p className="text-xs sm:text-[12.5px] text-apple-secondary leading-relaxed">
                           {proj.description}
                         </p>
                         <div className="flex flex-wrap gap-1 pt-1">

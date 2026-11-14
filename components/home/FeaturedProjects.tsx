@@ -42,18 +42,18 @@ export function FeaturedProjects() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-apple-text tracking-tight group-hover:text-apple-blue transition-colors mb-2">
+                <h3 className="text-xl sm:text-2xl font-semibold text-apple-text tracking-tight group-hover:text-apple-blue transition-colors mb-2">
                   <Link href={`/projects/${project.slug}/`}>
                     {project.title}
                   </Link>
                 </h3>
 
                 {/* Subtitle / summary */}
-                <p className="text-xs font-medium text-apple-secondary mb-3 leading-relaxed">
+                <p className="text-[13px] sm:text-sm font-medium text-apple-secondary mb-3 leading-relaxed">
                   {project.subtitle}
                 </p>
 
-                <p className="text-sm text-apple-secondary leading-relaxed mb-6">
+                <p className="text-[14.5px] sm:text-[15.5px] text-apple-secondary leading-relaxed mb-6">
                   {project.summary}
                 </p>
 
@@ -71,7 +71,7 @@ export function FeaturedProjects() {
               </div>
 
               {/* Bottom Actions */}
-              <div className="pt-4 border-t border-apple-borderSubtle flex items-center justify-between gap-3 text-xs font-medium">
+              <div className="pt-4 border-t border-apple-borderSubtle flex items-center justify-between gap-3 text-xs sm:text-[13.5px] font-medium">
                 <Link
                   href={`/projects/${project.slug}/`}
                   className="inline-flex items-center gap-1 text-apple-text hover:text-apple-blue transition-colors font-semibold"

@@ -130,7 +130,7 @@ export default function ContactPage() {
               <div className="text-xs text-apple-tertiary">Email Address</div>
               <a
                 href={`mailto:${personalData.email}`}
-                className="text-sm font-semibold text-apple-text hover:text-apple-blue transition-colors"
+                className="text-base font-semibold text-apple-text hover:text-apple-blue transition-colors"
               >
                 {personalData.email}
               </a>
@@ -138,7 +138,7 @@ export default function ContactPage() {
             <div className="pt-2 flex items-center gap-2">
               <a
                 href={`mailto:${personalData.email}`}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-semibold text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-colors"
+                className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs sm:text-[13px] font-semibold text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-colors"
               >
                 <span>Compose Email</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -166,7 +166,7 @@ export default function ContactPage() {
               <div className="text-xs text-apple-tertiary">Direct Telephone</div>
               <a
                 href={`tel:${personalData.phone}`}
-                className="text-sm font-semibold text-apple-text hover:text-apple-blue transition-colors font-mono"
+                className="text-base font-semibold text-apple-text hover:text-apple-blue transition-colors font-mono"
               >
                 {personalData.phone}
               </a>
@@ -174,7 +174,7 @@ export default function ContactPage() {
             <div className="pt-2 flex items-center gap-2">
               <a
                 href={`tel:${personalData.phone}`}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-semibold text-apple-text bg-apple-subtle border border-apple-border hover:bg-apple-borderSubtle transition-colors"
+                className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs sm:text-[13px] font-semibold text-apple-text bg-apple-subtle border border-apple-border hover:bg-apple-borderSubtle transition-colors"
               >
                 <span>Call Directly</span>
                 <Phone className="w-3.5 h-3.5" />
@@ -213,7 +213,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Name */}
               <div className="space-y-1.5">
-                <label htmlFor="name" className="text-xs font-medium text-apple-text">
+                <label htmlFor="name" className="text-sm font-medium text-apple-text">
                   Your Full Name <span className="text-rose-500">*</span>
                 </label>
                 <input
@@ -225,13 +225,13 @@ export default function ContactPage() {
                     if (errors.name) setErrors({ ...errors, name: undefined });
                   }}
                   placeholder="e.g. Sarah Jenkins"
-                  className={`w-full px-4 py-2.5 rounded-xl text-xs bg-apple-subtle border transition-colors focus:outline-none focus:ring-2 focus:ring-apple-blue/20 ${
+                  className={`w-full px-4 py-2.5 rounded-xl text-sm sm:text-base bg-apple-subtle border transition-colors focus:outline-none focus:ring-2 focus:ring-apple-blue/20 ${
                     errors.name ? "border-rose-400 bg-rose-50/20" : "border-apple-border focus:border-apple-blue"
                   }`}
                 />
                 {errors.name && (
-                  <p className="text-[11px] text-rose-600 flex items-center gap-1">
-                    <AlertCircle className="w-3 h-3" />
+                  <p className="text-xs text-rose-600 flex items-center gap-1">
+                    <AlertCircle className="w-3.5 h-3.5" />
                     <span>{errors.name}</span>
                   </p>
                 )}
@@ -239,7 +239,7 @@ export default function ContactPage() {
 
               {/* Email */}
               <div className="space-y-1.5">
-                <label htmlFor="email" className="text-xs font-medium text-apple-text">
+                <label htmlFor="email" className="text-sm font-medium text-apple-text">
                   Your Email Address <span className="text-rose-500">*</span>
                 </label>
                 <input
@@ -251,13 +251,13 @@ export default function ContactPage() {
                     if (errors.email) setErrors({ ...errors, email: undefined });
                   }}
                   placeholder="name@company.com"
-                  className={`w-full px-4 py-2.5 rounded-xl text-xs bg-apple-subtle border transition-colors focus:outline-none focus:ring-2 focus:ring-apple-blue/20 ${
+                  className={`w-full px-4 py-2.5 rounded-xl text-sm sm:text-base bg-apple-subtle border transition-colors focus:outline-none focus:ring-2 focus:ring-apple-blue/20 ${
                     errors.email ? "border-rose-400 bg-rose-50/20" : "border-apple-border focus:border-apple-blue"
                   }`}
                 />
                 {errors.email && (
-                  <p className="text-[11px] text-rose-600 flex items-center gap-1">
-                    <AlertCircle className="w-3 h-3" />
+                  <p className="text-xs text-rose-600 flex items-center gap-1">
+                    <AlertCircle className="w-3.5 h-3.5" />
                     <span>{errors.email}</span>
                   </p>
                 )}
@@ -266,7 +266,7 @@ export default function ContactPage() {
 
             {/* Subject */}
             <div className="space-y-1.5">
-              <label htmlFor="subject" className="text-xs font-medium text-apple-text">
+              <label htmlFor="subject" className="text-sm font-medium text-apple-text">
                 Subject / Role Inquiry <span className="text-rose-500">*</span>
               </label>
               <input
@@ -278,13 +278,13 @@ export default function ContactPage() {
                   if (errors.subject) setErrors({ ...errors, subject: undefined });
                 }}
                 placeholder="e.g. SDET Opportunity / Automation Project Inquiry"
-                className={`w-full px-4 py-2.5 rounded-xl text-xs bg-apple-subtle border transition-colors focus:outline-none focus:ring-2 focus:ring-apple-blue/20 ${
+                className={`w-full px-4 py-2.5 rounded-xl text-sm sm:text-base bg-apple-subtle border transition-colors focus:outline-none focus:ring-2 focus:ring-apple-blue/20 ${
                   errors.subject ? "border-rose-400 bg-rose-50/20" : "border-apple-border focus:border-apple-blue"
                 }`}
               />
               {errors.subject && (
-                <p className="text-[11px] text-rose-600 flex items-center gap-1">
-                  <AlertCircle className="w-3 h-3" />
+                <p className="text-xs text-rose-600 flex items-center gap-1">
+                  <AlertCircle className="w-3.5 h-3.5" />
                   <span>{errors.subject}</span>
                 </p>
               )}
@@ -292,7 +292,7 @@ export default function ContactPage() {
 
             {/* Message */}
             <div className="space-y-1.5">
-              <label htmlFor="message" className="text-xs font-medium text-apple-text">
+              <label htmlFor="message" className="text-sm font-medium text-apple-text">
                 Message &amp; Project Context <span className="text-rose-500">*</span>
               </label>
               <textarea
@@ -304,26 +304,26 @@ export default function ContactPage() {
                   if (errors.message) setErrors({ ...errors, message: undefined });
                 }}
                 placeholder="Please share details about your team, tech stack, or testing challenges..."
-                className={`w-full px-4 py-2.5 rounded-xl text-xs bg-apple-subtle border transition-colors focus:outline-none focus:ring-2 focus:ring-apple-blue/20 ${
+                className={`w-full px-4 py-2.5 rounded-xl text-sm sm:text-base bg-apple-subtle border transition-colors focus:outline-none focus:ring-2 focus:ring-apple-blue/20 ${
                   errors.message ? "border-rose-400 bg-rose-50/20" : "border-apple-border focus:border-apple-blue"
                 }`}
               />
               {errors.message && (
-                <p className="text-[11px] text-rose-600 flex items-center gap-1">
-                  <AlertCircle className="w-3 h-3" />
+                <p className="text-xs text-rose-600 flex items-center gap-1">
+                  <AlertCircle className="w-3.5 h-3.5" />
                   <span>{errors.message}</span>
                 </p>
               )}
             </div>
 
             <div className="pt-2 flex items-center justify-between">
-              <span className="text-[11px] text-apple-tertiary">
+              <span className="text-xs text-apple-tertiary">
                 * All fields are required for verification
               </span>
               <button
                 type="submit"
                 disabled={submitting}
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-semibold text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black disabled:opacity-50 transition-all shadow-apple"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black disabled:opacity-50 transition-all shadow-apple"
               >
                 {submitting ? (
                   <>

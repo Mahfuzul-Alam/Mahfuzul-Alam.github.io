@@ -20,10 +20,10 @@ export function ContactCTA() {
           <span className="inline-block text-[11px] font-semibold uppercase tracking-wider text-apple-blue">
             Initiate Collaboration
           </span>
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-apple-text">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-tight text-apple-text leading-[1.2]">
             Let&rsquo;s discuss software reliability and quality engineering.
           </h2>
-          <p className="text-sm sm:text-base text-apple-secondary max-w-xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-apple-secondary max-w-xl mx-auto leading-relaxed">
             I am currently open to SDET roles, technical quality engineering positions,
             and research discussions on automated testing and applied AI.
           </p>
@@ -32,7 +32,7 @@ export function ContactCTA() {
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href={`mailto:${personalData.email}`}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple hover:shadow-apple-md"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-[15px] font-medium text-white bg-neutral-900 dark:bg-white dark:text-black dark:hover:bg-slate-200 hover:bg-black transition-all shadow-apple hover:shadow-apple-md"
             >
               <Mail className="w-4 h-4" />
               <span>{personalData.email}</span>

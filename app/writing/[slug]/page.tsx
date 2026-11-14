@@ -213,15 +213,15 @@ export default async function ArticleDetailPage({ params }: ArticleProps) {
             />
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-apple-text leading-[1.15]">
+          <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-semibold tracking-tight text-apple-text leading-[1.18]">
             {article.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-apple-secondary leading-relaxed font-normal">
+          <p className="text-lg sm:text-xl text-apple-secondary leading-relaxed font-normal">
             {article.subtitle}
           </p>
 
-          <div className="pt-2 text-xs text-apple-tertiary flex items-center gap-2">
+          <div className="pt-2 text-xs sm:text-[13px] text-apple-tertiary flex items-center gap-2">
             <span>By Mahfuzul Alam</span>
             <span>•</span>
             <span>Software Development Engineer in Test (SDET)</span>
@@ -229,14 +229,14 @@ export default async function ArticleDetailPage({ params }: ArticleProps) {
         </header>
 
         {/* Article Body */}
-        <div className="space-y-10 text-apple-text">
+        <div className="space-y-12 text-apple-text">
           {article.content.map((section, idx) => (
             <section key={idx} className="space-y-4">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-apple-text">
+              <h2 className="text-2xl sm:text-[26px] font-semibold tracking-tight text-apple-text">
                 {section.sectionTitle}
               </h2>
 
-              <div className="space-y-4 text-sm sm:text-base text-apple-secondary leading-relaxed">
+              <div className="space-y-5 text-[16px] sm:text-[17.5px] text-apple-secondary leading-[1.75]">
                 {section.paragraphs.map((para, pIdx) => (
                   <p key={pIdx} className="whitespace-pre-line">
                     {para}
@@ -251,7 +251,7 @@ export default async function ArticleDetailPage({ params }: ArticleProps) {
                       <span>{section.codeBlock.language}</span>
                       <span>Snippet</span>
                     </div>
-                    <pre className="p-5 text-apple-text text-xs font-mono overflow-x-auto leading-relaxed">
+                    <pre className="p-5 text-apple-text text-[13px] sm:text-sm font-mono overflow-x-auto leading-relaxed">
                       <code>{section.codeBlock.code}</code>
                     </pre>
                   </div>

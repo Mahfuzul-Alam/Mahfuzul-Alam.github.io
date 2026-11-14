@@ -51,7 +51,7 @@ export default function ResearchPage() {
               <h3 className="text-2xl sm:text-3xl font-semibold text-apple-text tracking-tight leading-snug">
                 &ldquo;{thesis.title}&rdquo;
               </h3>
-              <p className="text-sm sm:text-base text-apple-secondary leading-relaxed">
+              <p className="text-base sm:text-lg text-apple-secondary leading-relaxed">
                 {thesis.summary}
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function ResearchPage() {
               <div className="text-xs font-semibold uppercase tracking-wider text-apple-text">
                 The Research Problem
               </div>
-              <p className="text-xs sm:text-sm text-apple-secondary leading-relaxed">
+              <p className="text-sm sm:text-[15px] text-apple-secondary leading-relaxed">
                 {thesis.problem}
               </p>
             </div>
@@ -98,10 +98,10 @@ export default function ResearchPage() {
                     className="p-5 rounded-2xl bg-apple-subtle border border-apple-border/60 space-y-1.5"
                   >
                     <div className="flex items-center justify-between">
-                      <h4 className="text-sm font-semibold text-apple-text">{p.name}</h4>
+                      <h4 className="text-sm sm:text-base font-semibold text-apple-text">{p.name}</h4>
                       <span className="text-[11px] text-apple-blue font-medium">{p.approach}</span>
                     </div>
-                    <p className="text-xs text-apple-secondary leading-relaxed">
+                    <p className="text-[13px] sm:text-sm text-apple-secondary leading-relaxed">
                       {p.summary}
                     </p>
                   </div>
@@ -121,7 +121,7 @@ export default function ResearchPage() {
                     className="p-4 rounded-2xl bg-white border border-apple-border/70 shadow-apple-sm flex items-start gap-3"
                   >
                     <CheckCircle2 className="w-4 h-4 text-apple-blue flex-shrink-0 mt-0.5" />
-                    <div className="space-y-0.5 text-xs text-apple-secondary">
+                    <div className="space-y-0.5 text-[13px] sm:text-sm text-apple-secondary leading-relaxed">
                       <strong className="text-apple-text font-semibold">{item.title}: </strong>
                       <span>{item.description}</span>
                     </div>
