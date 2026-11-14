@@ -6,34 +6,34 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://mahfuzul-alam.github.io";
+  const now = new Date().toISOString();
 
   const staticPages = [
-    "",
-    "/about",
-    "/projects",
-    "/research",
-    "/writing",
-    "/contact",
-    "/contact/thank-you",
-  ].map((route) => ({
+    { route: "", priority: 1.0, changeFrequency: "weekly" as const },
+    { route: "/about", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/projects", priority: 0.85, changeFrequency: "weekly" as const },
+    { route: "/research", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/writing", priority: 0.9, changeFrequency: "weekly" as const },
+    { route: "/contact", priority: 0.7, changeFrequency: "monthly" as const },
+  ].map(({ route, priority, changeFrequency }) => ({
     url: `${baseUrl}${route}/`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "monthly" as const,
-    priority: route === "" ? 1.0 : 0.8,
+    lastModified: now,
+    changeFrequency,
+    priority,
   }));
 
   const projectPages = projects.map((p) => ({
     url: `${baseUrl}/projects/${p.slug}/`,
-    lastModified: new Date().toISOString(),
+    lastModified: now,
     changeFrequency: "monthly" as const,
-    priority: 0.7,
+    priority: 0.8,
   }));
 
   const articlePages = articles.map((a) => ({
     url: `${baseUrl}/writing/${a.slug}/`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
   }));
 
   return [...staticPages, ...projectPages, ...articlePages];

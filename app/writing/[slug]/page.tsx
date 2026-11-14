@@ -33,19 +33,53 @@ export async function generateMetadata({
   const article = articles.find((a) => a.slug === slug);
   if (!article) return { title: "Article Not Found" };
 
+  const articleUrl = `https://mahfuzul-alam.github.io/writing/${article.slug}/`;
+
   return {
-    title: `${article.title} — Mahfuzul Alam`,
+    title: `${article.title} | Mahfuzul Alam (SDET)`,
     description: article.summary,
+    alternates: {
+      canonical: articleUrl,
+    },
+    authors: [{ name: "Mahfuzul Alam", url: "https://mahfuzul-alam.github.io/" }],
+    creator: "Mahfuzul Alam",
+    publisher: "Mahfuzul Alam",
+    keywords: [
+      article.category,
+      "SDET",
+      "Software Development Engineer in Test",
+      "Test Automation",
+      "Playwright",
+      "Cypress",
+      "Software Quality Assurance",
+      "Mahfuzul Alam",
+      "Applied AI in Software Testing",
+      "AI in QA",
+      "Quality Engineering",
+    ],
     openGraph: {
       title: article.title,
       description: article.summary,
       type: "article",
-      url: `https://mahfuzul-alam.github.io/writing/${article.slug}/`,
+      url: articleUrl,
+      publishedTime: article.date,
+      authors: ["Mahfuzul Alam"],
+      section: article.category,
+      tags: [article.category, "SDET", "Test Automation", "QA Engineering", "Applied AI"],
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${article.title} — Mahfuzul Alam`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
       description: article.summary,
+      images: ["/og-image.png"],
     },
   };
 }
@@ -69,8 +103,79 @@ export default async function ArticleDetailPage({ params }: ArticleProps) {
     .sort((a, b) => (a.category === article.category ? -1 : 1))
     .slice(0, 2);
 
+  const articleUrl = `https://mahfuzul-alam.github.io/writing/${article.slug}/`;
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": `${articleUrl}#article`,
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://mahfuzul-alam.github.io/#website",
+    },
+    "headline": article.title,
+    "alternativeHeadline": article.subtitle,
+    "description": article.summary,
+    "url": articleUrl,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://mahfuzul-alam.github.io/#person",
+      "name": "Mahfuzul Alam",
+      "jobTitle": "Software Development Engineer in Test (SDET)",
+      "url": "https://mahfuzul-alam.github.io/",
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://mahfuzul-alam.github.io/#person",
+      "name": "Mahfuzul Alam",
+    },
+    "datePublished": article.date,
+    "articleSection": article.category,
+    "keywords": `${article.category}, SDET, Test Automation, Software Quality Engineering, Applied AI in QA, Mahfuzul Alam`,
+    "inLanguage": "en-US",
+    "image": "https://mahfuzul-alam.github.io/og-image.png",
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://mahfuzul-alam.github.io/",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Engineering Writing",
+        "item": "https://mahfuzul-alam.github.io/writing/",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": article.title,
+        "item": articleUrl,
+      },
+    ],
+  };
+
   return (
-    <article className="pt-10 sm:pt-14 pb-16 sm:pb-24">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <article className="pt-10 sm:pt-14 pb-16 sm:pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Back Link & Local Action */}
         <div className="flex items-center justify-between gap-4">
@@ -257,5 +362,6 @@ export default async function ArticleDetailPage({ params }: ArticleProps) {
         </div>
       </div>
     </article>
+    </>
   );
 }

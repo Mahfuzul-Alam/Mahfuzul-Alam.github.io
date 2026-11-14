@@ -1,53 +1,41 @@
 # Mahfuzul Alam — Software Development Engineer in Test (SDET)
 
-> Building reliable software through intelligent testing and automation.
+> Software Development Engineer in Test (SDET) specializing in test automation (Playwright, Cypress, Selenium), CI/CD test reliability, and applied artificial intelligence in software testing.
 
-Mahfuzul Alam is a Software Development Engineer in Test (SDET) based in Dhaka, Bangladesh. He has 2.5+ years of verified industry experience in test automation, software quality engineering, and practical applications of artificial intelligence in software testing.
+Mahfuzul Alam is an SDET with 2.5+ years of verified software quality assurance and automation engineering experience based in Dhaka, Bangladesh. He engineers resilient automated test suites, implements empirical test flakiness heuristics, and utilizes Large Language Models (LLMs) as cognitive thinking partners for test design, edge case derivation, and Jira documentation.
 
-## Identity & Professional Overview
-- **Name:** Mahfuzul Alam
-- **Title:** Software Development Engineer in Test (SDET)
-- **Email:** mahfuzshanto12@gmail.com
-- **Phone:** +8801939594524
-- **Location:** Dhaka, Bangladesh
-- **LinkedIn:** https://www.linkedin.com/in/1-mahfuzul-alam/
-- **GitHub:** https://github.com/Mahfuzul-Alam
-- **Current Company:** Efficient Software Solutions (May 2024 – Present)
-- **Degree:** B.Sc. in Computer Science & Engineering, American International University-Bangladesh (AIUB), 2018–2023, Specialization in Software Engineering.
+## Core Technical Competencies
+- Test Automation: Playwright, Cypress, Selenium WebDriver, TestNG, JUnit, Maven, JMeter
+- Testing Specializations: End-to-End (E2E) Testing, Regression Testing, Smoke & Sanity Testing, Exploratory Testing, Page Object Model (POM)
+- Programming Languages: JavaScript (ES6+), TypeScript, Python, Java, SQL, HTML5, CSS3
+- API Verification: Postman, RESTful APIs, JSON Validation, SQL databases
+- Applied AI in QA: LLM-assisted test scenario generation, edge case derivation, prompt engineering for testing, Jira defect documentation, heuristic flakiness detection
 
-## Primary Technical Competencies
-- **Test Automation:** Playwright, Cypress, Selenium WebDriver, TestNG, JUnit, Maven, JMeter.
-- **Testing Methodologies:** End-to-End (E2E) Testing, Regression Testing, Smoke & Sanity Testing, Exploratory Testing, Page Object Model (POM).
-- **Programming & Scripting:** JavaScript (ES6+), TypeScript, Python, Java, SQL, HTML5, CSS3.
-- **API & Data Verification:** Postman, RESTful APIs, JSON Validation, Relational Databases (SQL).
-- **CI/CD & Tools:** Git, GitHub Actions, Jira Software.
-- **AI-Augmented QA:** LLM-assisted test scenario generation, edge-case derivation, requirement analysis, n8n workflow automation, heuristic test flakiness analysis.
+## Technical Articles & Case Studies
+- [Beyond Test Cases: How I Use AI as an SDET in My Everyday Work](https://mahfuzul-alam.github.io/writing/ai-assisted-software-testing-sdet-workflow/): Practical insights on using ChatGPT as a technical thinking partner to break down complex requirements, investigate unexpected system behaviors, and communicate technical blockers.
+- [From Requirements to Test Scenarios: How I Use AI to Think Like a Tester](https://mahfuzul-alam.github.io/writing/ai-requirement-analysis-test-scenario-design/): Systematic breakdown of feature specifications into positive, negative, and edge-case test matrices using structured AI prompts without leaking sensitive IP.
+- [Using ChatGPT to Write Better Jira Test Cases: A Practical Guide for QA Engineers](https://mahfuzul-alam.github.io/writing/chatgpt-jira-test-case-documentation/): Transforming vague user stories into structured Jira test tickets with explicit preconditions, deterministic test steps, expected vs actual criteria, and boundary conditions.
+- [AI-Assisted Test Automation: How I Use ChatGPT to Work Smarter with Playwright](https://mahfuzul-alam.github.io/writing/ai-assisted-playwright-test-automation/): Accelerating Playwright automation through AI-generated locator strategies, Page Object Model boilerplate, asynchronous wait handling, and mock API assertions.
+- [When Testing Gets Blocked: How I Use AI to Investigate and Communicate QA Challenges](https://mahfuzul-alam.github.io/writing/ai-assisted-qa-blocker-investigation/): Engineering-driven incident triage using AI to analyze HTTP 500 error logs, reproduce elusive race conditions, and draft authoritative blocker tickets for engineering leads.
+- [Heuristic Flakiness Detection: Identifying Unstable Tests from JUnit Artifacts](https://mahfuzul-alam.github.io/writing/heuristic-flakiness-detection-junit-artifacts/): Mathematical and empirical approaches to parsing CI/CD JUnit XML reports to detect intermittent oscillations and isolate environmental race conditions from real product regressions.
+- [Augmenting Edge-Case Discovery: Practical Strategies for LLM-Assisted Test Design](https://mahfuzul-alam.github.io/writing/augmenting-edge-case-discovery-llm-test-design/): Counterfactual prompting techniques for discovering boundary conditions, combinatorial input states, and concurrency vulnerabilities that human testers typically overlook.
 
-## Key Projects
-- **RunLens (Test Run Reliability Dashboard):** Lightweight, in-memory JUnit XML test analytics and flakiness heuristic engine parsing test artifacts across CI/CD builds with client-side localStorage privacy. GitHub: https://github.com/Mahfuzul-Alam/test-run-reliability-dashboard | Live: https://mahfuzul-alam.github.io/test-run-reliability-dashboard/
-- **Zenith Tasks:** High-performance, accessible personal task management system built with Next.js App Router, strict TypeScript, and WCAG-compliant keyboard accessibility. GitHub: https://github.com/Mahfuzul-Alam/todo-app | Live: https://mahfuzul-alam.github.io/todo-app/
-- **Michigan Home Help:** Multi-step caregiver and applicant eligibility questionnaire and knowledge base frontend for Medicaid home care assistance. Live: https://www.michiganworkfromhome.com/ | GitHub: https://github.com/Mahfuzul-Alam/michigan-home-help
-- **Cypress E2E Automation Suite:** Modular web test automation suite covering user journeys, forms, and dynamic assertions. GitHub: https://github.com/Mahfuzul-Alam/dummywebtest
-- **AgileALM Test Automation:** Enterprise Java test framework with Selenium WebDriver, Maven, TestNG, and Page Object Model. GitHub: https://github.com/Mahfuzul-Alam/SeleniumDummyWebTest
-
-## The SDET Journal & Technical Articles
-- **Beyond Test Cases: How I Use AI as an SDET in My Everyday Work:** https://mahfuzul-alam.github.io/writing/ai-assisted-software-testing-sdet-workflow/
-- **From Requirements to Test Scenarios: How I Use AI to Think Like a Tester:** https://mahfuzul-alam.github.io/writing/ai-requirement-analysis-test-scenario-design/
-- **Using ChatGPT to Write Better Jira Test Cases: A Practical Guide for QA Engineers:** https://mahfuzul-alam.github.io/writing/chatgpt-jira-test-case-documentation/
-- **AI-Assisted Test Automation: How I Use ChatGPT to Work Smarter with Playwright:** https://mahfuzul-alam.github.io/writing/ai-assisted-playwright-test-automation/
-- **When Testing Gets Blocked: How I Use AI to Investigate and Communicate QA Challenges:** https://mahfuzul-alam.github.io/writing/ai-assisted-qa-blocker-investigation/
-- **Heuristic Flakiness Detection: Identifying Unstable Tests from JUnit Artifacts:** https://mahfuzul-alam.github.io/writing/heuristic-flakiness-detection-junit-artifacts/
-- **Augmenting Edge-Case Discovery: Practical Strategies for LLM-Assisted Test Design:** https://mahfuzul-alam.github.io/writing/augmenting-edge-case-discovery-llm-test-design/
+## Projects & Open Source
+- [RunLens — Test Run Reliability Dashboard](https://mahfuzul-alam.github.io/test-run-reliability-dashboard/): In-memory JUnit XML test analytics and empirical flakiness heuristic engine parsing CI/CD build artifacts with complete browser-side privacy. Source code: [GitHub Repository](https://github.com/Mahfuzul-Alam/test-run-reliability-dashboard).
+- [Zenith Tasks — Accessible Task Management System](https://mahfuzul-alam.github.io/todo-app/): High-performance personal task system built with Next.js App Router and strict TypeScript, engineered for instant client-side speed and complete WCAG accessibility. Source code: [GitHub Repository](https://github.com/Mahfuzul-Alam/todo-app).
+- [Michigan Home Help](https://www.michiganworkfromhome.com/): Multi-step caregiver and applicant eligibility questionnaire and knowledge base frontend for Medicaid home care assistance. Source code: [GitHub Repository](https://github.com/Mahfuzul-Alam/michigan-home-help).
+- [Cypress End-to-End Automation Suite](https://github.com/Mahfuzul-Alam/dummywebtest): Modular web test automation suite covering user journeys, forms, and dynamic assertions.
+- [Selenium WebDriver & TestNG Framework](https://github.com/Mahfuzul-Alam/SeleniumDummyWebTest): Enterprise Java test framework with Selenium WebDriver, Maven, TestNG, and Page Object Model.
 
 ## Academic Research
-- **Undergraduate Project Thesis:** "A Comparison of Low Code Development Platforms in Terms of Convenience", Department of Computer Science, American International University-Bangladesh (AIUB), May 2022.
-  - Authors: Faiaz Ben Reza, Mahfuzul Alam, Tarif Sadman, Yasmin Sultana.
-  - Supervisor: Mir Md. Kawsur, Lecturer, Department of Computer Science, AIUB.
-  - Platforms Investigated: OutSystems, Zoho Creator, Microsoft PowerApps, Salesforce.
-  - Practical Benchmark: Built a Contact Management System across all 4 platforms without custom hand-written code to evaluate development convenience, toolchain consolidation, dynamic vs static security analysis, and runtime models.
-- **Research Interests:** AI in Software Engineering, LLM-based test synthesis, CI/CD test flakiness heuristics, software reliability engineering.
+- [Undergraduate Thesis: A Comparison of Low Code Development Platforms in Terms of Convenience](https://mahfuzul-alam.github.io/research/): Comprehensive empirical evaluation of OutSystems, Zoho Creator, Microsoft PowerApps, and Salesforce conducted at American International University-Bangladesh (AIUB).
 
-## Certifications
-- Cypress - Modern Automation Testing from Scratch + Frameworks (Udemy)
-- Building Test Automation Framework using Selenium and TestNG (Coursera)
-- Performance Testing with JMeter (Coursera)
+## Contact & Profiles
+- Website: https://mahfuzul-alam.github.io/
+- LinkedIn: https://www.linkedin.com/in/1-mahfuzul-alam/
+- GitHub: https://github.com/Mahfuzul-Alam
+- Email: mahfuzshanto12@gmail.com
+- Location: Dhaka, Bangladesh
+
+## Optional & Deep Dive
+- [Full Context & Knowledge Base](https://mahfuzul-alam.github.io/llms-full.txt): Complete unabridged technical context, methodology breakdowns, and extended transcripts for LLM ingestion.

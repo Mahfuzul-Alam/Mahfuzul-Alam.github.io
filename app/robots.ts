@@ -8,20 +8,27 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: "/admin/",
+        disallow: ["/admin/", "/admin"],
       },
       {
         userAgent: [
           "GPTBot",
           "ChatGPT-User",
+          "OAI-SearchBot",
           "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
           "PerplexityBot",
           "Google-Extended",
-          "anthropic-ai",
+          "Applebot-Extended",
+          "cohere-ai",
+          "meta-externalagent",
+          "Bytespider",
         ],
-        allow: ["/", "/llms.txt", "/llms-full.txt"],
+        allow: ["/", "/llms.txt", "/llms-full.txt", "/writing/", "/projects/", "/about/", "/research/"],
       },
     ],
     sitemap: "https://mahfuzul-alam.github.io/sitemap.xml",
+    host: "https://mahfuzul-alam.github.io",
   };
 }

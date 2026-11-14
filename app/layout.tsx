@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "Reliability Engineering",
     "Dhaka, Bangladesh",
   ],
+  alternates: {
+    canonical: "https://mahfuzul-alam.github.io/",
+  },
   authors: [{ name: personalData.name, url: personalData.github }],
   creator: personalData.name,
   openGraph: {
@@ -74,6 +77,56 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d)){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": "https://mahfuzul-alam.github.io/#person",
+                  "name": personalData.name,
+                  "jobTitle": personalData.title,
+                  "description": `${personalData.headline} ${personalData.shortBio}`,
+                  "url": "https://mahfuzul-alam.github.io/",
+                  "image": "https://mahfuzul-alam.github.io/images/mahfuzul-alam.jpg",
+                  "sameAs": [personalData.github, personalData.linkedin],
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Dhaka",
+                    "addressCountry": "Bangladesh"
+                  },
+                  "alumniOf": {
+                    "@type": "EducationalOrganization",
+                    "name": "American International University-Bangladesh (AIUB)"
+                  },
+                  "knowsAbout": [
+                    "Software Development Engineer in Test (SDET)",
+                    "Test Automation Engineering",
+                    "Playwright",
+                    "Cypress",
+                    "Selenium WebDriver",
+                    "End-to-End (E2E) Testing",
+                    "CI/CD Reliability",
+                    "Applied AI in Software Testing",
+                    "Heuristic Flakiness Detection"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://mahfuzul-alam.github.io/#website",
+                  "url": "https://mahfuzul-alam.github.io/",
+                  "name": `${personalData.name} — Portfolio & SDET Engineering Hub`,
+                  "description": personalData.headline,
+                  "publisher": {
+                    "@id": "https://mahfuzul-alam.github.io/#person"
+                  }
+                }
+              ]
+            }),
           }}
         />
       </head>

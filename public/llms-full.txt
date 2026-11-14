@@ -70,6 +70,64 @@ Key Products Tested:
    - Repository: https://github.com/Mahfuzul-Alam/SeleniumDummyWebTest
    - Technologies: Java, Selenium WebDriver, TestNG, Maven, Page Object Model (POM).
 
-## Technical Writing
-- "Heuristic Flakiness Detection: Identifying Unstable Tests from JUnit Artifacts"
-- "Augmenting Edge-Case Discovery: Practical Strategies for LLM-Assisted Test Design"
+## The SDET Journal & Technical Articles (Full Transcripts & Summaries)
+
+### 1. Beyond Test Cases: How I Use AI as an SDET in My Everyday Work
+URL: https://mahfuzul-alam.github.io/writing/ai-assisted-software-testing-sdet-workflow/
+Category: Applied AI in QA | Date: April 2026
+Summary: How Mahfuzul Alam integrates ChatGPT into an active SDET workflow across requirement analysis, test scenario derivation, Jira defect documentation, Playwright automation boilerplate, and blocker investigation.
+Key Takeaways:
+- Modern quality engineering requires cognitive partnerships rather than rote execution.
+- LLMs excel at uncovering combinatorial gaps and ambiguous specifications when prompted with structured schemas.
+- Validation is non-negotiable: human SDETs retain accountability for test deterministic assertion and system verification.
+
+### 2. From Requirements to Test Scenarios: How I Use AI to Think Like a Tester
+URL: https://mahfuzul-alam.github.io/writing/ai-requirement-analysis-test-scenario-design/
+Category: Test Design & Strategy | Date: March 2026
+Summary: Practical framework for decomposing complex user stories and technical requirements into structured test matrices (positive, negative, boundary, security, performance).
+Key Framework:
+- Step 1: Anonymize and extract business rules from the specification.
+- Step 2: Use multi-perspective prompting (end-user, malicious attacker, system administrator, network-degraded user).
+- Step 3: Map outputs into explicit Given-When-Then criteria.
+
+### 3. Using ChatGPT to Write Better Jira Test Cases: A Practical Guide for QA Engineers
+URL: https://mahfuzul-alam.github.io/writing/chatgpt-jira-test-case-documentation/
+Category: Real-World QA & Engineering Practices | Date: February 2026
+Summary: A repeatable system for converting unstructured product notes into high-clarity Jira test cases that developers respect and execute without ambiguity.
+Key Structure:
+- Preconditions (environment state, authenticated user role, feature flags).
+- Exact step-by-step navigation with explicit inputs.
+- Verifiable expected results distinct from pass/fail observations.
+- Boundary condition checklist.
+
+### 4. AI-Assisted Test Automation: How I Use ChatGPT to Work Smarter with Playwright
+URL: https://mahfuzul-alam.github.io/writing/ai-assisted-playwright-test-automation/
+Category: Test Automation Engineering | Date: January 2026
+Summary: Technical guide on accelerating Playwright test automation using AI for resilient locator strategy selection, Page Object Model structuring, asynchronous wait patterns, and mock API network fixtures.
+Key Highlights:
+- Replacing fragile XPath and CSS nth-child selectors with user-facing role locators (`page.getByRole()`, `page.getByLabel()`).
+- Generating boilerplate Page Object models without architectural hallucinations.
+- Using `page.waitForResponse()` to eliminate arbitrary sleeps (`page.waitForTimeout()`).
+
+### 5. When Testing Gets Blocked: How I Use AI to Investigate and Communicate QA Challenges
+URL: https://mahfuzul-alam.github.io/writing/ai-assisted-qa-blocker-investigation/
+Category: Real-World QA & Engineering Practices | Date: December 2025
+Summary: Engineering-led triage methods for analyzing stack traces, deciphering HTTP 500 logs, reproducing intermittent defects, and constructing professional blocker escalations.
+Key Triage Protocol:
+- Isolate the failure boundary: Network, Database, Frontend State, or Environment Config.
+- Supply anonymized backend logs to LLM to identify root-cause signatures (e.g. unhandled null pointer vs constraint violation).
+- Document reproductive steps with curl reproduction commands.
+
+### 6. Heuristic Flakiness Detection: Identifying Unstable Tests from JUnit Artifacts
+URL: https://mahfuzul-alam.github.io/writing/heuristic-flakiness-detection-junit-artifacts/
+Category: Software Quality & Reliability | Date: November 2025
+Summary: Mathematical and heuristic modeling to identify flaky test suites from CI/CD JUnit XML logs.
+Formulas & Logic:
+- Flakiness Score = (Transitions between Pass and Fail) / (Total Valid Executions)
+- Requires minimum 5 non-skipped test executions.
+- Isolates infrastructure timeouts from true product assertions.
+
+### 7. Augmenting Edge-Case Discovery: Practical Strategies for LLM-Assisted Test Design
+URL: https://mahfuzul-alam.github.io/writing/augmenting-edge-case-discovery-llm-test-design/
+Category: Applied AI in QA | Date: October 2025
+Summary: Advanced prompt patterns for finding unseen software boundary conditions, character encoding limits, concurrency race conditions, and temporal date/time edge cases.
